@@ -1,0 +1,501 @@
+2026-08-12 00:05:10.730 | INFO     | symbol_trader:_poll_check_state:482 - VELVETUSDT: REST poll detected filled limit order 2329538444
+2026-08-12 00:05:11.061 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002132985152 on VELVETUSDT
+2026-08-12 00:05:11.353 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY VELVETUSDT triggerPrice=0.6103000 (closePosition=true)
+2026-08-12 00:05:11.361 | INFO     | symbol_trader:_place_take_profit:415 - VELVETUSDT: TP Algo order placed stopPrice=0.6103 (algoId=3000002133091765)
+2026-08-12 00:05:11.365 | INFO     | symbol_trader:_on_limit_filled:597 - VELVETUSDT: limit 4/10 filled price=0.6487 avg=0.636468 tp=0.610373 (trailing=True) rev_dist=5.91% dep=53.46 exp_pnl=2.19
+2026-08-12 00:17:16.245 | INFO     | symbol_trader:_poll_check_state:463 - VELVETUSDT: REST poll detected flat position (TP hit)
+2026-08-12 00:17:16.246 | INFO     | symbol_trader:_on_tp_filled:621 - VELVETUSDT: TP filled at 0.610373!
+2026-08-12 00:17:16.520 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for VELVETUSDT
+2026-08-12 00:17:17.622 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for VELVETUSDT
+2026-08-12 00:17:17.891 | INFO     | symbol_trader:run:202 - VELVETUSDT: all 1 tries completed.
+2026-08-12 00:17:17.974 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 08:09:43.793 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 08:09:43.796 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 08:09:44.474 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 08:09:45.473 | INFO     | symbol_trader:initialize:110 - HOLOUSDT: margin mode set to CROSS
+2026-08-12 08:09:46.021 | INFO     | symbol_trader:initialize:117 - HOLOUSDT: leverage set to 50x
+2026-08-12 08:09:46.022 | INFO     | __main__:main:98 - Trader initialized for HOLOUSDT
+2026-08-12 08:09:46.023 | INFO     | symbol_trader:_run_cycle:209 - HOLOUSDT: starting cycle 1/1
+2026-08-12 08:09:46.569 | INFO     | symbol_trader:_check_balance:267 - HOLOUSDT: balance check — need 3.2998 USDT margin (50x lev, total notional 164.99), have 172.9464 USDT
+2026-08-12 08:09:47.114 | INFO     | exchange:place_market_order:150 - Market order placed: SELL HOLOUSDT qty=119
+2026-08-12 08:09:47.905 | INFO     | symbol_trader:_open_market_entry:326 - HOLOUSDT: market entry filled price=0.08363 qty=119.0000 tp=0.0802012 trailing=True
+2026-08-12 08:09:48.384 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0849200 qty=141
+2026-08-12 08:09:48.389 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 2 placed price=0.08492 qty=141.3000
+2026-08-12 08:09:48.707 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0862700 qty=167
+2026-08-12 08:09:48.713 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 3 placed price=0.08627 qty=166.9000
+2026-08-12 08:09:49.032 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0876500 qty=197
+2026-08-12 08:09:49.038 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 4 placed price=0.08765 qty=197.1000
+2026-08-12 08:09:49.358 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0890800 qty=233
+2026-08-12 08:09:49.362 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 5 placed price=0.08908 qty=232.7000
+2026-08-12 08:09:49.680 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0905600 qty=275
+2026-08-12 08:09:49.685 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 6 placed price=0.09056 qty=274.7000
+2026-08-12 08:09:50.007 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0920800 qty=324
+2026-08-12 08:09:50.011 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 7 placed price=0.09208 qty=324.2000
+2026-08-12 08:09:50.329 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0936600 qty=382
+2026-08-12 08:09:50.334 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 8 placed price=0.09366 qty=382.5000
+2026-08-12 08:09:50.662 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0802000 (closePosition=true)
+2026-08-12 08:09:50.672 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.0802 (algoId=3000002133538737)
+2026-08-12 08:09:50.672 | INFO     | symbol_trader:_wait_for_tp:431 - HOLOUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 08:16:34.765 | INFO     | symbol_trader:_poll_check_state:482 - HOLOUSDT: REST poll detected filled limit order 881267227
+2026-08-12 08:16:35.076 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133538737 on HOLOUSDT
+2026-08-12 08:16:35.398 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0808700 (closePosition=true)
+2026-08-12 08:16:35.408 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.08087 (algoId=3000002133544887)
+2026-08-12 08:16:35.413 | INFO     | symbol_trader:_on_limit_filled:597 - HOLOUSDT: limit 2/8 filled price=0.08492 avg=0.0843296 tp=0.0808721 (trailing=True) rev_dist=4.77% dep=21.93 exp_pnl=0.90
+2026-08-12 08:19:13.298 | INFO     | symbol_trader:_poll_check_state:482 - HOLOUSDT: REST poll detected filled limit order 881267252
+2026-08-12 08:19:13.593 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133544887 on HOLOUSDT
+2026-08-12 08:19:13.871 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0815900 (closePosition=true)
+2026-08-12 08:19:13.884 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.08159 (algoId=3000002133547007)
+2026-08-12 08:19:13.890 | INFO     | symbol_trader:_on_limit_filled:597 - HOLOUSDT: limit 3/8 filled price=0.08627 avg=0.0850885 tp=0.0815999 (trailing=True) rev_dist=5.41% dep=36.33 exp_pnl=1.49
+2026-08-12 08:55:07.068 | INFO     | symbol_trader:_poll_check_state:482 - HOLOUSDT: REST poll detected filled limit order 881268815
+2026-08-12 08:55:07.456 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133547007 on HOLOUSDT
+2026-08-12 08:55:07.806 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0823700 (closePosition=true)
+2026-08-12 08:55:07.813 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.08237 (algoId=3000002133580652)
+2026-08-12 08:55:07.817 | INFO     | symbol_trader:_on_limit_filled:597 - HOLOUSDT: limit 4/8 filled price=0.08765 avg=0.0858972 tp=0.0823754 (trailing=True) rev_dist=6.02% dep=53.60 exp_pnl=2.20
+2026-08-12 08:59:42.802 | INFO     | symbol_trader:_poll_check_state:482 - HOLOUSDT: REST poll detected filled limit order 881269482
+2026-08-12 08:59:43.111 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133580652 on HOLOUSDT
+2026-08-12 08:59:43.390 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0832000 (closePosition=true)
+2026-08-12 08:59:43.413 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.0832 (algoId=3000002133584432)
+2026-08-12 08:59:43.417 | INFO     | symbol_trader:_on_limit_filled:597 - HOLOUSDT: limit 5/8 filled price=0.08908 avg=0.0867625 tp=0.0832052 (trailing=True) rev_dist=6.59% dep=74.36 exp_pnl=3.05
+2026-08-12 09:24:37.881 | INFO     | symbol_trader:_poll_check_state:463 - HOLOUSDT: REST poll detected flat position (TP hit)
+2026-08-12 09:24:37.882 | INFO     | symbol_trader:_on_tp_filled:621 - HOLOUSDT: TP filled at 0.0832052!
+2026-08-12 09:24:38.155 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 09:24:39.940 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 09:24:40.232 | INFO     | symbol_trader:run:202 - HOLOUSDT: all 1 tries completed.
+2026-08-12 09:24:40.330 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 09:25:35.882 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 09:25:35.884 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 09:25:36.522 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 09:25:37.756 | INFO     | symbol_trader:initialize:110 - HOLOUSDT: margin mode set to CROSS
+2026-08-12 09:25:38.498 | INFO     | symbol_trader:initialize:117 - HOLOUSDT: leverage set to 50x
+2026-08-12 09:25:38.499 | INFO     | __main__:main:98 - Trader initialized for HOLOUSDT
+2026-08-12 09:25:38.503 | INFO     | symbol_trader:_run_cycle:209 - HOLOUSDT: starting cycle 1/1
+2026-08-12 09:25:39.064 | INFO     | symbol_trader:_check_balance:267 - HOLOUSDT: balance check — need 3.2998 USDT margin (50x lev, total notional 164.99), have 175.8259 USDT
+2026-08-12 09:25:39.616 | INFO     | exchange:place_market_order:150 - Market order placed: SELL HOLOUSDT qty=121
+2026-08-12 09:25:40.407 | INFO     | symbol_trader:_open_market_entry:326 - HOLOUSDT: market entry filled price=0.08241 qty=121.0000 tp=0.0790312 trailing=True
+2026-08-12 09:25:40.887 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0836900 qty=143
+2026-08-12 09:25:40.896 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 2 placed price=0.08369 qty=143.3000
+2026-08-12 09:25:41.219 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0850100 qty=169
+2026-08-12 09:25:41.228 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 3 placed price=0.08501 qty=169.3000
+2026-08-12 09:25:41.583 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0863700 qty=200
+2026-08-12 09:25:41.591 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 4 placed price=0.08637 qty=200.0000
+2026-08-12 09:25:41.925 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0877800 qty=236
+2026-08-12 09:25:41.934 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 5 placed price=0.08778 qty=236.2000
+2026-08-12 09:25:42.255 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0892300 qty=279
+2026-08-12 09:25:42.264 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 6 placed price=0.08923 qty=278.8000
+2026-08-12 09:25:42.584 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0907400 qty=329
+2026-08-12 09:25:42.591 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 7 placed price=0.09074 qty=329.0000
+2026-08-12 09:25:42.914 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0922900 qty=388
+2026-08-12 09:25:42.924 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 8 placed price=0.09229 qty=388.2000
+2026-08-12 09:25:43.254 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0790300 (closePosition=true)
+2026-08-12 09:25:43.268 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.07903 (algoId=3000002133610827)
+2026-08-12 09:25:43.269 | INFO     | symbol_trader:_wait_for_tp:431 - HOLOUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 10:29:32.112 | WARNING  | symbol_trader:_poll_check_state:487 - HOLOUSDT: REST poll error: 
+2026-08-12 10:35:50.069 | INFO     | symbol_trader:_poll_check_state:463 - HOLOUSDT: REST poll detected flat position (TP hit)
+2026-08-12 10:35:50.070 | INFO     | symbol_trader:_on_tp_filled:621 - HOLOUSDT: TP filled at 0.0790312!
+2026-08-12 10:35:50.362 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 10:35:52.306 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 10:35:52.606 | INFO     | symbol_trader:run:202 - HOLOUSDT: all 1 tries completed.
+2026-08-12 10:35:52.793 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 10:36:53.322 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 10:36:53.324 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 10:37:00.238 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 10:37:04.029 | INFO     | symbol_trader:initialize:110 - HOLOUSDT: margin mode set to CROSS
+2026-08-12 10:37:04.616 | INFO     | symbol_trader:initialize:117 - HOLOUSDT: leverage set to 50x
+2026-08-12 10:37:04.616 | INFO     | __main__:main:98 - Trader initialized for HOLOUSDT
+2026-08-12 10:37:04.618 | INFO     | symbol_trader:_run_cycle:209 - HOLOUSDT: starting cycle 1/1
+2026-08-12 10:37:05.195 | INFO     | symbol_trader:_check_balance:267 - HOLOUSDT: balance check — need 3.2998 USDT margin (50x lev, total notional 164.99), have 176.1900 USDT
+2026-08-12 10:37:06.374 | INFO     | exchange:place_market_order:150 - Market order placed: SELL HOLOUSDT qty=127
+2026-08-12 10:37:07.746 | INFO     | symbol_trader:_open_market_entry:326 - HOLOUSDT: market entry filled price=0.0784 qty=127.0000 tp=0.0751856 trailing=True
+2026-08-12 10:37:08.409 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0796100 qty=151
+2026-08-12 10:37:08.419 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 2 placed price=0.07961 qty=150.7000
+2026-08-12 10:37:08.794 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0808700 qty=178
+2026-08-12 10:37:08.802 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 3 placed price=0.08087 qty=178.0000
+2026-08-12 10:37:09.183 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0821700 qty=210
+2026-08-12 10:37:09.191 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 4 placed price=0.08217 qty=210.2000
+2026-08-12 10:37:09.572 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0835100 qty=248
+2026-08-12 10:37:09.580 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 5 placed price=0.08351 qty=248.3000
+2026-08-12 10:37:09.962 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0848900 qty=293
+2026-08-12 10:37:09.970 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 6 placed price=0.08489 qty=293.1000
+2026-08-12 10:37:10.352 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0863200 qty=346
+2026-08-12 10:37:10.363 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 7 placed price=0.08632 qty=345.9000
+2026-08-12 10:37:10.746 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0878000 qty=408
+2026-08-12 10:37:10.754 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 8 placed price=0.0878 qty=408.1000
+2026-08-12 10:37:11.226 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0751800 (closePosition=true)
+2026-08-12 10:37:11.237 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.07518 (algoId=3000002133689215)
+2026-08-12 10:37:11.238 | INFO     | symbol_trader:_wait_for_tp:431 - HOLOUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 10:40:32.354 | INFO     | symbol_trader:_poll_check_state:463 - HOLOUSDT: REST poll detected flat position (TP hit)
+2026-08-12 10:40:32.355 | INFO     | symbol_trader:_on_tp_filled:621 - HOLOUSDT: TP filled at 0.0751856!
+2026-08-12 10:40:32.626 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 10:40:33.897 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 10:40:34.163 | INFO     | symbol_trader:run:202 - HOLOUSDT: all 1 tries completed.
+2026-08-12 10:40:34.250 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 10:40:42.993 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 10:40:42.995 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 10:40:43.624 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 10:40:44.917 | INFO     | symbol_trader:initialize:110 - HOLOUSDT: margin mode set to CROSS
+2026-08-12 10:40:45.472 | INFO     | symbol_trader:initialize:117 - HOLOUSDT: leverage set to 50x
+2026-08-12 10:40:45.472 | INFO     | __main__:main:98 - Trader initialized for HOLOUSDT
+2026-08-12 10:40:45.478 | INFO     | symbol_trader:_run_cycle:209 - HOLOUSDT: starting cycle 1/3
+2026-08-12 10:40:46.018 | INFO     | symbol_trader:_check_balance:267 - HOLOUSDT: balance check — need 3.2998 USDT margin (50x lev, total notional 164.99), have 176.3376 USDT
+2026-08-12 10:40:46.592 | INFO     | exchange:place_market_order:150 - Market order placed: SELL HOLOUSDT qty=129
+2026-08-12 10:40:47.386 | INFO     | symbol_trader:_open_market_entry:326 - HOLOUSDT: market entry filled price=0.07719 qty=129.0000 tp=0.0740252 trailing=True
+2026-08-12 10:40:47.846 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0783800 qty=153
+2026-08-12 10:40:47.856 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 2 placed price=0.07838 qty=153.1000
+2026-08-12 10:40:48.173 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0796200 qty=181
+2026-08-12 10:40:48.179 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 3 placed price=0.07962 qty=180.8000
+2026-08-12 10:40:48.504 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0809000 qty=214
+2026-08-12 10:40:48.512 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 4 placed price=0.0809 qty=213.5000
+2026-08-12 10:40:48.831 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0822200 qty=252
+2026-08-12 10:40:48.842 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 5 placed price=0.08222 qty=252.2000
+2026-08-12 10:40:49.164 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0835800 qty=298
+2026-08-12 10:40:49.172 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 6 placed price=0.08358 qty=297.7000
+2026-08-12 10:40:49.490 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0849900 qty=351
+2026-08-12 10:40:49.498 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 7 placed price=0.08499 qty=351.3000
+2026-08-12 10:40:49.824 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0864500 qty=414
+2026-08-12 10:40:49.832 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 8 placed price=0.08645 qty=414.4000
+2026-08-12 10:40:50.159 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0740200 (closePosition=true)
+2026-08-12 10:40:50.172 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.07402 (algoId=3000002133693045)
+2026-08-12 10:40:50.172 | INFO     | symbol_trader:_wait_for_tp:431 - HOLOUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 10:49:43.104 | INFO     | symbol_trader:_poll_check_state:463 - HOLOUSDT: REST poll detected flat position (TP hit)
+2026-08-12 10:49:43.107 | INFO     | symbol_trader:_on_tp_filled:621 - HOLOUSDT: TP filled at 0.0740252!
+2026-08-12 10:49:43.374 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 10:49:44.656 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 10:49:44.931 | INFO     | symbol_trader:_run_cycle:209 - HOLOUSDT: starting cycle 2/3
+2026-08-12 10:49:45.477 | INFO     | symbol_trader:_check_balance:267 - HOLOUSDT: balance check — need 3.2998 USDT margin (50x lev, total notional 164.99), have 176.7174 USDT
+2026-08-12 10:49:46.027 | INFO     | exchange:place_market_order:150 - Market order placed: SELL HOLOUSDT qty=134
+2026-08-12 10:49:46.811 | INFO     | symbol_trader:_open_market_entry:326 - HOLOUSDT: market entry filled price=0.07479 qty=134.0000 tp=0.0717236 trailing=True
+2026-08-12 10:49:47.158 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0759500 qty=158
+2026-08-12 10:49:47.165 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 2 placed price=0.07595 qty=157.9000
+2026-08-12 10:49:47.487 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0771500 qty=187
+2026-08-12 10:49:47.501 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 3 placed price=0.07715 qty=186.6000
+2026-08-12 10:49:47.823 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0783800 qty=220
+2026-08-12 10:49:47.837 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 4 placed price=0.07838 qty=220.4000
+2026-08-12 10:49:48.190 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0796600 qty=260
+2026-08-12 10:49:48.197 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 5 placed price=0.07966 qty=260.3000
+2026-08-12 10:49:48.527 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0809800 qty=307
+2026-08-12 10:49:48.534 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 6 placed price=0.08098 qty=307.2000
+2026-08-12 10:49:48.855 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0823500 qty=362
+2026-08-12 10:49:48.861 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 7 placed price=0.08235 qty=362.5000
+2026-08-12 10:49:49.220 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0837600 qty=428
+2026-08-12 10:49:49.228 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 8 placed price=0.08376 qty=427.7000
+2026-08-12 10:49:49.593 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0717200 (closePosition=true)
+2026-08-12 10:49:49.615 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.07172 (algoId=3000002133703459)
+2026-08-12 10:49:49.617 | INFO     | symbol_trader:_wait_for_tp:431 - HOLOUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 11:04:09.075 | INFO     | symbol_trader:_poll_check_state:482 - HOLOUSDT: REST poll detected filled limit order 885780409
+2026-08-12 11:04:09.920 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133703459 on HOLOUSDT
+2026-08-12 11:04:10.700 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0723200 (closePosition=true)
+2026-08-12 11:04:10.720 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.07232 (algoId=3000002133721575)
+2026-08-12 11:04:10.732 | INFO     | symbol_trader:_on_limit_filled:597 - HOLOUSDT: limit 2/8 filled price=0.07595 avg=0.0754177 tp=0.0723255 (trailing=True) rev_dist=4.77% dep=22.02 exp_pnl=0.90
+2026-08-12 12:12:51.866 | INFO     | symbol_trader:_poll_check_state:463 - HOLOUSDT: REST poll detected flat position (TP hit)
+2026-08-12 12:12:51.867 | INFO     | symbol_trader:_on_tp_filled:621 - HOLOUSDT: TP filled at 0.0723255!
+2026-08-12 12:12:52.258 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 12:12:53.997 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 12:12:54.581 | INFO     | symbol_trader:_run_cycle:209 - HOLOUSDT: starting cycle 3/3
+2026-08-12 12:12:55.165 | INFO     | symbol_trader:_check_balance:267 - HOLOUSDT: balance check — need 3.2998 USDT margin (50x lev, total notional 164.99), have 177.1223 USDT
+2026-08-12 12:12:55.748 | INFO     | exchange:place_market_order:150 - Market order placed: SELL HOLOUSDT qty=135
+2026-08-12 12:12:56.617 | INFO     | symbol_trader:_open_market_entry:326 - HOLOUSDT: market entry filled price=0.07398 qty=135.0000 tp=0.0709468 trailing=True
+2026-08-12 12:12:57.093 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0751200 qty=160
+2026-08-12 12:12:57.102 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 2 placed price=0.07512 qty=159.7000
+2026-08-12 12:12:57.424 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0763100 qty=189
+2026-08-12 12:12:57.432 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 3 placed price=0.07631 qty=188.7000
+2026-08-12 12:12:57.898 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0775400 qty=223
+2026-08-12 12:12:57.907 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 4 placed price=0.07754 qty=222.8000
+2026-08-12 12:12:58.389 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0788000 qty=263
+2026-08-12 12:12:58.397 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 5 placed price=0.0788 qty=263.1000
+2026-08-12 12:12:58.779 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0801100 qty=311
+2026-08-12 12:12:58.787 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 6 placed price=0.08011 qty=310.6000
+2026-08-12 12:12:59.166 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0814600 qty=366
+2026-08-12 12:12:59.173 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 7 placed price=0.08146 qty=366.5000
+2026-08-12 12:12:59.595 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL HOLOUSDT price=0.0828500 qty=432
+2026-08-12 12:12:59.603 | DEBUG    | symbol_trader:_place_grid_orders:377 - HOLOUSDT: limit order 8 placed price=0.08285 qty=432.4000
+2026-08-12 12:12:59.991 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY HOLOUSDT triggerPrice=0.0709400 (closePosition=true)
+2026-08-12 12:13:00.002 | INFO     | symbol_trader:_place_take_profit:415 - HOLOUSDT: TP Algo order placed stopPrice=0.07094 (algoId=3000002133811110)
+2026-08-12 12:13:00.003 | INFO     | symbol_trader:_wait_for_tp:431 - HOLOUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 12:13:11.706 | INFO     | symbol_trader:_poll_check_state:463 - HOLOUSDT: REST poll detected flat position (TP hit)
+2026-08-12 12:13:11.706 | INFO     | symbol_trader:_on_tp_filled:621 - HOLOUSDT: TP filled at 0.0709468!
+2026-08-12 12:13:11.974 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for HOLOUSDT
+2026-08-12 12:13:12.374 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-12 12:13:12.561 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-12 12:13:12.562 | INFO     | symbol_trader:_run_cycle:242 - HOLOUSDT: cycle cancelled.
+2026-08-12 12:13:12.711 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-12 12:13:12.711 | INFO     | __main__:run_trader:123 - HOLOUSDT: task cancelled.
+2026-08-12 12:13:12.712 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 12:13:16.908 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 12:13:16.910 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 12:13:18.036 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 12:13:19.881 | INFO     | symbol_trader:initialize:110 - CAPUSDT: margin mode set to CROSS
+2026-08-12 12:13:21.174 | INFO     | symbol_trader:initialize:117 - CAPUSDT: leverage set to 10x
+2026-08-12 12:13:21.174 | INFO     | __main__:main:98 - Trader initialized for CAPUSDT
+2026-08-12 12:13:21.180 | INFO     | symbol_trader:_run_cycle:209 - CAPUSDT: starting cycle 1/3
+2026-08-12 12:13:22.628 | INFO     | symbol_trader:_check_balance:267 - CAPUSDT: balance check — need 16.4991 USDT margin (10x lev, total notional 164.99), have 177.1150 USDT
+2026-08-12 12:13:22.704 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-12 12:13:22.705 | INFO     | symbol_trader:_run_cycle:242 - CAPUSDT: cycle cancelled.
+2026-08-12 12:13:22.892 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-12 12:13:22.892 | INFO     | __main__:run_trader:123 - CAPUSDT: task cancelled.
+2026-08-12 12:13:22.892 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 12:13:33.671 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 12:13:33.673 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 12:13:34.344 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 12:13:35.255 | INFO     | symbol_trader:initialize:110 - CAPUSDT: margin mode set to CROSS
+2026-08-12 12:13:35.802 | INFO     | symbol_trader:initialize:117 - CAPUSDT: leverage set to 10x
+2026-08-12 12:13:35.802 | INFO     | __main__:main:98 - Trader initialized for CAPUSDT
+2026-08-12 12:13:35.803 | INFO     | symbol_trader:_run_cycle:209 - CAPUSDT: starting cycle 1/3
+2026-08-12 12:13:36.345 | INFO     | symbol_trader:_check_balance:267 - CAPUSDT: balance check — need 16.4991 USDT margin (10x lev, total notional 164.99), have 177.1150 USDT
+2026-08-12 12:13:36.912 | INFO     | exchange:place_market_order:150 - Market order placed: SELL CAPUSDT qty=174
+2026-08-12 12:13:37.694 | INFO     | symbol_trader:_open_market_entry:326 - CAPUSDT: market entry filled price=0.05741 qty=174.0000 tp=0.0550562 trailing=True
+2026-08-12 12:13:38.636 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0583000 qty=206
+2026-08-12 12:13:38.642 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 2 placed price=0.0583 qty=205.8000
+2026-08-12 12:13:38.965 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0592200 qty=243
+2026-08-12 12:13:38.969 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 3 placed price=0.05922 qty=243.1000
+2026-08-12 12:13:39.304 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0601700 qty=287
+2026-08-12 12:13:39.308 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 4 placed price=0.06017 qty=287.1000
+2026-08-12 12:13:39.636 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0611500 qty=339
+2026-08-12 12:13:39.640 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 5 placed price=0.06115 qty=339.1000
+2026-08-12 12:13:39.962 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0621600 qty=400
+2026-08-12 12:13:39.969 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 6 placed price=0.06216 qty=400.3000
+2026-08-12 12:13:40.286 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0632100 qty=472
+2026-08-12 12:13:40.292 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 7 placed price=0.06321 qty=472.3000
+2026-08-12 12:13:40.620 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0642900 qty=557
+2026-08-12 12:13:40.627 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 8 placed price=0.06429 qty=557.3000
+2026-08-12 12:13:40.956 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0550500 (closePosition=true)
+2026-08-12 12:13:40.968 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05505 (algoId=3000002133811799)
+2026-08-12 12:13:40.968 | INFO     | symbol_trader:_wait_for_tp:431 - CAPUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 12:16:11.586 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 238131376
+2026-08-12 12:16:11.885 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133811799 on CAPUSDT
+2026-08-12 12:16:12.465 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0555100 (closePosition=true)
+2026-08-12 12:16:12.477 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05551 (algoId=3000002133814437)
+2026-08-12 12:16:12.483 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 2/8 filled price=0.0583 avg=0.0578925 tp=0.0555189 (trailing=True) rev_dist=4.77% dep=22.00 exp_pnl=0.90
+2026-08-12 13:04:09.664 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 238131384
+2026-08-12 13:04:10.028 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133814437 on CAPUSDT
+2026-08-12 13:04:10.419 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0560100 (closePosition=true)
+2026-08-12 13:04:10.427 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05601 (algoId=3000002133879382)
+2026-08-12 13:04:10.431 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 3/8 filled price=0.05922 avg=0.0584103 tp=0.0560155 (trailing=True) rev_dist=5.41% dep=36.39 exp_pnl=1.49
+2026-08-12 15:03:53.662 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 238131481
+2026-08-12 15:03:54.049 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002133879382 on CAPUSDT
+2026-08-12 15:03:54.333 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0565400 (closePosition=true)
+2026-08-12 15:03:54.344 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05654 (algoId=3000002134027596)
+2026-08-12 15:03:54.348 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 4/8 filled price=0.06017 avg=0.0589653 tp=0.0565477 (trailing=True) rev_dist=6.02% dep=53.66 exp_pnl=2.20
+2026-08-12 15:03:54.831 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 238131496
+2026-08-12 15:03:55.115 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134027596 on CAPUSDT
+2026-08-12 15:03:55.400 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0571100 (closePosition=true)
+2026-08-12 15:03:55.413 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05711 (algoId=3000002134027615)
+2026-08-12 15:03:55.416 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 5/8 filled price=0.06115 avg=0.0595582 tp=0.0571164 (trailing=True) rev_dist=6.60% dep=74.39 exp_pnl=3.05
+2026-08-12 15:24:04.917 | INFO     | symbol_trader:_poll_check_state:463 - CAPUSDT: REST poll detected flat position (TP hit)
+2026-08-12 15:24:04.921 | INFO     | symbol_trader:_on_tp_filled:621 - CAPUSDT: TP filled at 0.0571164!
+2026-08-12 15:24:05.218 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for CAPUSDT
+2026-08-12 15:24:06.557 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for CAPUSDT
+2026-08-12 15:24:06.827 | INFO     | symbol_trader:_run_cycle:209 - CAPUSDT: starting cycle 2/3
+2026-08-12 15:24:07.374 | INFO     | symbol_trader:_check_balance:267 - CAPUSDT: balance check — need 16.4991 USDT margin (10x lev, total notional 164.99), have 180.1022 USDT
+2026-08-12 15:24:07.935 | INFO     | exchange:place_market_order:150 - Market order placed: SELL CAPUSDT qty=175
+2026-08-12 15:24:08.730 | INFO     | symbol_trader:_open_market_entry:326 - CAPUSDT: market entry filled price=0.05733 qty=175.0000 tp=0.0549795 trailing=True
+2026-08-12 15:24:09.113 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0582200 qty=206
+2026-08-12 15:24:09.119 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 2 placed price=0.05822 qty=206.1000
+2026-08-12 15:24:09.480 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0591400 qty=243
+2026-08-12 15:24:09.491 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 3 placed price=0.05914 qty=243.4000
+2026-08-12 15:24:09.914 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0600800 qty=288
+2026-08-12 15:24:09.928 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 4 placed price=0.06008 qty=287.6000
+2026-08-12 15:24:10.304 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0610600 qty=340
+2026-08-12 15:24:10.334 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 5 placed price=0.06106 qty=339.6000
+2026-08-12 15:24:10.697 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0620800 qty=401
+2026-08-12 15:24:10.708 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 6 placed price=0.06208 qty=400.8000
+2026-08-12 15:24:11.177 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0631200 qty=473
+2026-08-12 15:24:11.185 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 7 placed price=0.06312 qty=473.0000
+2026-08-12 15:24:11.568 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0642000 qty=558
+2026-08-12 15:24:11.577 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 8 placed price=0.0642 qty=558.1000
+2026-08-12 15:24:11.954 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0549700 (closePosition=true)
+2026-08-12 15:24:11.967 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05497 (algoId=3000002134054079)
+2026-08-12 15:24:11.968 | INFO     | symbol_trader:_wait_for_tp:431 - CAPUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 15:25:06.143 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 240093057
+2026-08-12 15:25:06.443 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134054079 on CAPUSDT
+2026-08-12 15:25:06.721 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0554400 (closePosition=true)
+2026-08-12 15:25:06.731 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05544 (algoId=3000002134055236)
+2026-08-12 15:25:06.735 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 2/8 filled price=0.05822 avg=0.0578112 tp=0.0554409 (trailing=True) rev_dist=4.77% dep=22.03 exp_pnl=0.90
+2026-08-12 15:52:02.639 | INFO     | symbol_trader:_poll_check_state:463 - CAPUSDT: REST poll detected flat position (TP hit)
+2026-08-12 15:52:02.642 | INFO     | symbol_trader:_on_tp_filled:621 - CAPUSDT: TP filled at 0.0554409!
+2026-08-12 15:52:02.911 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for CAPUSDT
+2026-08-12 15:52:04.552 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for CAPUSDT
+2026-08-12 15:52:04.928 | INFO     | symbol_trader:_run_cycle:209 - CAPUSDT: starting cycle 3/3
+2026-08-12 15:52:05.522 | INFO     | symbol_trader:_check_balance:267 - CAPUSDT: balance check — need 16.4991 USDT margin (10x lev, total notional 164.99), have 180.9801 USDT
+2026-08-12 15:52:06.194 | INFO     | exchange:place_market_order:150 - Market order placed: SELL CAPUSDT qty=180
+2026-08-12 15:52:07.103 | INFO     | symbol_trader:_open_market_entry:326 - CAPUSDT: market entry filled price=0.0555577 qty=180.0000 tp=0.0532798 trailing=True
+2026-08-12 15:52:07.562 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0564200 qty=213
+2026-08-12 15:52:07.574 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 2 placed price=0.05642 qty=212.6000
+2026-08-12 15:52:07.945 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0573100 qty=251
+2026-08-12 15:52:07.952 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 3 placed price=0.05731 qty=251.2000
+2026-08-12 15:52:08.334 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0582300 qty=297
+2026-08-12 15:52:08.344 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 4 placed price=0.05823 qty=296.7000
+2026-08-12 15:52:08.820 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0591800 qty=350
+2026-08-12 15:52:08.828 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 5 placed price=0.05918 qty=350.3000
+2026-08-12 15:52:09.209 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0601600 qty=414
+2026-08-12 15:52:09.220 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 6 placed price=0.06016 qty=413.6000
+2026-08-12 15:52:09.598 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0611700 qty=488
+2026-08-12 15:52:09.608 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 7 placed price=0.06117 qty=488.1000
+2026-08-12 15:52:10.029 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL CAPUSDT price=0.0622200 qty=576
+2026-08-12 15:52:10.036 | DEBUG    | symbol_trader:_place_grid_orders:377 - CAPUSDT: limit order 8 placed price=0.06222 qty=575.8000
+2026-08-12 15:52:10.420 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0532700 (closePosition=true)
+2026-08-12 15:52:10.438 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05327 (algoId=3000002134113287)
+2026-08-12 15:52:10.439 | INFO     | symbol_trader:_wait_for_tp:431 - CAPUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 15:53:04.189 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 240463062
+2026-08-12 15:53:04.500 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134113287 on CAPUSDT
+2026-08-12 15:53:04.778 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0537200 (closePosition=true)
+2026-08-12 15:53:04.794 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05372 (algoId=3000002134114869)
+2026-08-12 15:53:04.798 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 2/8 filled price=0.05642 avg=0.0560251 tp=0.053728 (trailing=True) rev_dist=4.77% dep=22.02 exp_pnl=0.90
+2026-08-12 16:00:32.415 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 240463182
+2026-08-12 16:00:32.706 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134114869 on CAPUSDT
+2026-08-12 16:00:32.987 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0542000 (closePosition=true)
+2026-08-12 16:00:32.998 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.0542 (algoId=3000002134126250)
+2026-08-12 16:00:33.003 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 3/8 filled price=0.05731 avg=0.0565259 tp=0.0542083 (trailing=True) rev_dist=5.41% dep=36.40 exp_pnl=1.49
+2026-08-12 18:16:09.937 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 240463283
+2026-08-12 18:16:10.318 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134126250 on CAPUSDT
+2026-08-12 18:16:10.613 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0547200 (closePosition=true)
+2026-08-12 18:16:10.622 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05472 (algoId=3000002134403870)
+2026-08-12 18:16:10.627 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 4/8 filled price=0.05823 avg=0.0570637 tp=0.0547241 (trailing=True) rev_dist=6.02% dep=53.70 exp_pnl=2.20
+2026-08-12 19:00:02.976 | INFO     | symbol_trader:_poll_check_state:482 - CAPUSDT: REST poll detected filled limit order 240463415
+2026-08-12 19:00:03.439 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134403870 on CAPUSDT
+2026-08-12 19:00:03.790 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY CAPUSDT triggerPrice=0.0552700 (closePosition=true)
+2026-08-12 19:00:03.799 | INFO     | symbol_trader:_place_take_profit:415 - CAPUSDT: TP Algo order placed stopPrice=0.05527 (algoId=3000002134465692)
+2026-08-12 19:00:03.803 | INFO     | symbol_trader:_on_limit_filled:597 - CAPUSDT: limit 5/8 filled price=0.05918 avg=0.0576375 tp=0.0552743 (trailing=True) rev_dist=6.60% dep=74.41 exp_pnl=3.05
+2026-08-12 20:00:08.941 | INFO     | symbol_trader:_poll_check_state:463 - CAPUSDT: REST poll detected flat position (TP hit)
+2026-08-12 20:00:08.958 | INFO     | symbol_trader:_on_tp_filled:621 - CAPUSDT: TP filled at 0.0552743!
+2026-08-12 20:00:09.437 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for CAPUSDT
+2026-08-12 20:00:11.914 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for CAPUSDT
+2026-08-12 20:00:12.485 | INFO     | symbol_trader:run:202 - CAPUSDT: all 3 tries completed.
+2026-08-12 20:00:12.693 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 20:38:48.919 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 20:38:48.921 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 20:38:49.608 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 20:38:50.850 | INFO     | symbol_trader:initialize:110 - PROMUSDT: margin mode set to CROSS
+2026-08-12 20:38:51.400 | INFO     | symbol_trader:initialize:117 - PROMUSDT: leverage set to 50x
+2026-08-12 20:38:51.400 | INFO     | __main__:main:98 - Trader initialized for PROMUSDT
+2026-08-12 20:38:51.404 | INFO     | symbol_trader:_run_cycle:209 - PROMUSDT: starting cycle 1/3
+2026-08-12 20:38:51.958 | INFO     | symbol_trader:_check_balance:267 - PROMUSDT: balance check — need 3.2998 USDT margin (50x lev, total notional 164.99), have 183.9671 USDT
+2026-08-12 20:38:52.506 | INFO     | exchange:place_market_order:150 - Market order placed: SELL PROMUSDT qty=3.9
+2026-08-12 20:38:53.311 | INFO     | symbol_trader:_open_market_entry:326 - PROMUSDT: market entry filled price=2.554 qty=3.9000 tp=2.44929 trailing=True
+2026-08-12 20:38:53.781 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL PROMUSDT price=2.5930000 qty=4.6
+2026-08-12 20:38:53.788 | DEBUG    | symbol_trader:_place_grid_orders:377 - PROMUSDT: limit order 2 placed price=2.593 qty=4.6000
+2026-08-12 20:38:54.121 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL PROMUSDT price=2.6340000 qty=5.4
+2026-08-12 20:38:54.128 | DEBUG    | symbol_trader:_place_grid_orders:377 - PROMUSDT: limit order 3 placed price=2.634 qty=5.4000
+2026-08-12 20:38:54.457 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL PROMUSDT price=2.6760000 qty=6.4
+2026-08-12 20:38:54.466 | DEBUG    | symbol_trader:_place_grid_orders:377 - PROMUSDT: limit order 4 placed price=2.676 qty=6.4000
+2026-08-12 20:38:54.790 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL PROMUSDT price=2.7200000 qty=7.6
+2026-08-12 20:38:54.796 | DEBUG    | symbol_trader:_place_grid_orders:377 - PROMUSDT: limit order 5 placed price=2.72 qty=7.6000
+2026-08-12 20:38:55.116 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL PROMUSDT price=2.7650000 qty=8.9
+2026-08-12 20:38:55.123 | DEBUG    | symbol_trader:_place_grid_orders:377 - PROMUSDT: limit order 6 placed price=2.765 qty=8.9000
+2026-08-12 20:38:55.444 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL PROMUSDT price=2.8120000 qty=10.6
+2026-08-12 20:38:55.451 | DEBUG    | symbol_trader:_place_grid_orders:377 - PROMUSDT: limit order 7 placed price=2.812 qty=10.6000
+2026-08-12 20:38:55.805 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL PROMUSDT price=2.8600000 qty=12.5
+2026-08-12 20:38:55.816 | DEBUG    | symbol_trader:_place_grid_orders:377 - PROMUSDT: limit order 8 placed price=2.86 qty=12.5000
+2026-08-12 20:38:56.149 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY PROMUSDT triggerPrice=2.4490000 (closePosition=true)
+2026-08-12 20:38:56.161 | INFO     | symbol_trader:_place_take_profit:415 - PROMUSDT: TP Algo order placed stopPrice=2.449 (algoId=3000002134584465)
+2026-08-12 20:38:56.161 | INFO     | symbol_trader:_wait_for_tp:431 - PROMUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 20:41:09.714 | INFO     | symbol_trader:_poll_check_state:482 - PROMUSDT: REST poll detected filled limit order 882688161
+2026-08-12 20:41:10.042 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134584465 on PROMUSDT
+2026-08-12 20:41:10.426 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY PROMUSDT triggerPrice=2.4690000 (closePosition=true)
+2026-08-12 20:41:10.438 | INFO     | symbol_trader:_place_take_profit:415 - PROMUSDT: TP Algo order placed stopPrice=2.469 (algoId=3000002134586902)
+2026-08-12 20:41:10.441 | INFO     | symbol_trader:_on_limit_filled:597 - PROMUSDT: limit 2/8 filled price=2.593 avg=2.57511 tp=2.46953 (trailing=True) rev_dist=4.76% dep=21.89 exp_pnl=0.90
+2026-08-12 20:44:11.507 | INFO     | symbol_trader:_poll_check_state:482 - PROMUSDT: REST poll detected filled limit order 882688406
+2026-08-12 20:44:11.898 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134586902 on PROMUSDT
+2026-08-12 20:44:12.182 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY PROMUSDT triggerPrice=2.4910000 (closePosition=true)
+2026-08-12 20:44:12.190 | INFO     | symbol_trader:_place_take_profit:415 - PROMUSDT: TP Algo order placed stopPrice=2.491 (algoId=3000002134590189)
+2026-08-12 20:44:12.195 | INFO     | symbol_trader:_on_limit_filled:597 - PROMUSDT: limit 3/8 filled price=2.634 avg=2.59799 tp=2.49147 (trailing=True) rev_dist=5.41% dep=36.11 exp_pnl=1.48
+2026-08-12 20:44:43.771 | INFO     | symbol_trader:_poll_check_state:482 - PROMUSDT: REST poll detected filled limit order 882688553
+2026-08-12 20:44:44.062 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134590189 on PROMUSDT
+2026-08-12 20:44:44.342 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY PROMUSDT triggerPrice=2.5150000 (closePosition=true)
+2026-08-12 20:44:44.351 | INFO     | symbol_trader:_place_take_profit:415 - PROMUSDT: TP Algo order placed stopPrice=2.515 (algoId=3000002134590649)
+2026-08-12 20:44:44.355 | INFO     | symbol_trader:_on_limit_filled:597 - PROMUSDT: limit 4/8 filled price=2.676 avg=2.62258 tp=2.51506 (trailing=True) rev_dist=6.01% dep=53.24 exp_pnl=2.18
+2026-08-12 20:53:59.180 | INFO     | symbol_trader:_poll_check_state:482 - PROMUSDT: REST poll detected filled limit order 882688736
+2026-08-12 20:53:59.606 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134590649 on PROMUSDT
+2026-08-12 20:53:59.900 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY PROMUSDT triggerPrice=2.5400000 (closePosition=true)
+2026-08-12 20:53:59.909 | INFO     | symbol_trader:_place_take_profit:415 - PROMUSDT: TP Algo order placed stopPrice=2.54 (algoId=3000002134601670)
+2026-08-12 20:53:59.913 | INFO     | symbol_trader:_on_limit_filled:597 - PROMUSDT: limit 5/8 filled price=2.72 avg=2.64912 tp=2.5405 (trailing=True) rev_dist=6.60% dep=73.91 exp_pnl=3.03
+2026-08-12 21:24:26.541 | INFO     | symbol_trader:_poll_check_state:463 - PROMUSDT: REST poll detected flat position (TP hit)
+2026-08-12 21:24:26.546 | INFO     | symbol_trader:_on_tp_filled:621 - PROMUSDT: TP filled at 2.5405!
+2026-08-12 21:24:28.279 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for PROMUSDT
+2026-08-12 21:24:28.460 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-12 21:24:28.663 | INFO     | symbol_trader:_run_cycle:242 - PROMUSDT: cycle cancelled.
+2026-08-12 21:24:28.797 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-12 21:24:28.798 | INFO     | __main__:run_trader:123 - PROMUSDT: task cancelled.
+2026-08-12 21:24:28.801 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 21:32:39.364 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 21:32:39.366 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 21:32:40.857 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 21:32:42.274 | INFO     | symbol_trader:initialize:110 - BTWUSDT: margin mode set to CROSS
+2026-08-12 21:32:42.999 | INFO     | symbol_trader:initialize:117 - BTWUSDT: leverage set to 10x
+2026-08-12 21:32:42.999 | INFO     | __main__:main:98 - Trader initialized for BTWUSDT
+2026-08-12 21:32:43.005 | INFO     | symbol_trader:_run_cycle:209 - BTWUSDT: starting cycle 1/1
+2026-08-12 21:32:43.855 | INFO     | symbol_trader:_check_balance:267 - BTWUSDT: balance check — need 16.4991 USDT margin (10x lev, total notional 164.99), have 184.2569 USDT
+2026-08-12 21:32:44.724 | INFO     | exchange:place_market_order:150 - Market order placed: SELL BTWUSDT qty=40
+2026-08-12 21:32:45.622 | INFO     | symbol_trader:_open_market_entry:326 - BTWUSDT: market entry filled price=0.249355 qty=40.0000 tp=0.239131 trailing=True
+2026-08-12 21:32:46.876 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2532300 qty=47
+2026-08-12 21:32:46.881 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 2 placed price=0.25323 qty=47.3000
+2026-08-12 21:32:47.435 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2572200 qty=56
+2026-08-12 21:32:47.443 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 3 placed price=0.25722 qty=55.9000
+2026-08-12 21:32:48.336 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2613500 qty=66
+2026-08-12 21:32:48.344 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 4 placed price=0.26135 qty=66.1000
+2026-08-12 21:32:48.774 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2656100 qty=78
+2026-08-12 21:32:48.780 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 5 placed price=0.26561 qty=78.0000
+2026-08-12 21:32:49.173 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2700100 qty=92
+2026-08-12 21:32:49.202 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 6 placed price=0.27001 qty=92.1000
+2026-08-12 21:32:50.224 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2745700 qty=109
+2026-08-12 21:32:50.233 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 7 placed price=0.27457 qty=108.7000
+2026-08-12 21:32:50.996 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2792700 qty=128
+2026-08-12 21:32:51.001 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 8 placed price=0.27927 qty=128.3000
+2026-08-12 21:32:51.575 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY BTWUSDT triggerPrice=0.2391300 (closePosition=true)
+2026-08-12 21:32:51.591 | INFO     | symbol_trader:_place_take_profit:415 - BTWUSDT: TP Algo order placed stopPrice=0.23913 (algoId=3000002134642208)
+2026-08-12 21:32:51.592 | INFO     | symbol_trader:_wait_for_tp:431 - BTWUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 21:43:29.680 | INFO     | symbol_trader:_poll_check_state:482 - BTWUSDT: REST poll detected filled limit order 1249894718
+2026-08-12 21:43:30.166 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134642208 on BTWUSDT
+2026-08-12 21:43:30.486 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY BTWUSDT triggerPrice=0.2411300 (closePosition=true)
+2026-08-12 21:43:30.496 | INFO     | symbol_trader:_place_take_profit:415 - BTWUSDT: TP Algo order placed stopPrice=0.24113 (algoId=3000002134652867)
+2026-08-12 21:43:30.499 | INFO     | symbol_trader:_on_limit_filled:597 - BTWUSDT: limit 2/8 filled price=0.25323 avg=0.251448 tp=0.241139 (trailing=True) rev_dist=4.77% dep=21.88 exp_pnl=0.90
+2026-08-12 21:43:35.508 | WARNING  | notifier:send:35 - Telegram send failed: Timed out
+2026-08-12 21:59:17.663 | INFO     | symbol_trader:_poll_check_state:482 - BTWUSDT: REST poll detected filled limit order 1249894907
+2026-08-12 21:59:18.533 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134652867 on BTWUSDT
+2026-08-12 21:59:19.212 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY BTWUSDT triggerPrice=0.2433000 (closePosition=true)
+2026-08-12 21:59:19.228 | INFO     | symbol_trader:_place_take_profit:415 - BTWUSDT: TP Algo order placed stopPrice=0.2433 (algoId=3000002134669242)
+2026-08-12 21:59:19.236 | INFO     | symbol_trader:_on_limit_filled:597 - BTWUSDT: limit 3/8 filled price=0.25722 avg=0.253709 tp=0.243307 (trailing=True) rev_dist=5.41% dep=36.28 exp_pnl=1.49
+2026-08-12 21:59:25.141 | WARNING  | notifier:send:35 - Telegram send failed: Timed out
+2026-08-12 22:09:30.154 | INFO     | symbol_trader:_poll_check_state:482 - BTWUSDT: REST poll detected filled limit order 1249895122
+2026-08-12 22:09:30.525 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134669242 on BTWUSDT
+2026-08-12 22:09:31.172 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY BTWUSDT triggerPrice=0.2456200 (closePosition=true)
+2026-08-12 22:09:31.181 | INFO     | symbol_trader:_place_take_profit:415 - BTWUSDT: TP Algo order placed stopPrice=0.24562 (algoId=3000002134679110)
+2026-08-12 22:09:31.185 | INFO     | symbol_trader:_on_limit_filled:597 - BTWUSDT: limit 4/8 filled price=0.26135 avg=0.256122 tp=0.245621 (trailing=True) rev_dist=6.02% dep=53.53 exp_pnl=2.19
+2026-08-12 22:13:28.785 | WARNING  | symbol_trader:_poll_check_state:487 - BTWUSDT: REST poll error: APIError(code=-1021): Timestamp for this request is outside of the recvWindow.
+2026-08-12 23:11:48.154 | INFO     | symbol_trader:_poll_check_state:463 - BTWUSDT: REST poll detected flat position (TP hit)
+2026-08-12 23:11:48.156 | INFO     | symbol_trader:_on_tp_filled:621 - BTWUSDT: TP filled at 0.245621!
+2026-08-12 23:11:48.434 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for BTWUSDT
+2026-08-12 23:11:49.766 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for BTWUSDT
+2026-08-12 23:11:50.037 | INFO     | symbol_trader:run:202 - BTWUSDT: all 1 tries completed.
+2026-08-12 23:11:50.144 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-12 23:37:45.007 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-12 23:37:45.008 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-12 23:37:45.714 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-12 23:37:46.525 | INFO     | symbol_trader:initialize:110 - BTWUSDT: margin mode set to CROSS
+2026-08-12 23:37:47.077 | INFO     | symbol_trader:initialize:117 - BTWUSDT: leverage set to 10x
+2026-08-12 23:37:47.078 | INFO     | __main__:main:98 - Trader initialized for BTWUSDT
+2026-08-12 23:37:47.081 | INFO     | symbol_trader:_run_cycle:209 - BTWUSDT: starting cycle 1/3
+2026-08-12 23:37:47.624 | INFO     | symbol_trader:_check_balance:267 - BTWUSDT: balance check — need 16.4991 USDT margin (10x lev, total notional 164.99), have 186.4533 USDT
+2026-08-12 23:37:48.189 | INFO     | exchange:place_market_order:150 - Market order placed: SELL BTWUSDT qty=40
+2026-08-12 23:37:48.980 | INFO     | symbol_trader:_open_market_entry:326 - BTWUSDT: market entry filled price=0.24828 qty=40.0000 tp=0.238101 trailing=True
+2026-08-12 23:37:49.633 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2521300 qty=48
+2026-08-12 23:37:49.639 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 2 placed price=0.25213 qty=47.5000
+2026-08-12 23:37:49.962 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2561200 qty=56
+2026-08-12 23:37:49.969 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 3 placed price=0.25612 qty=56.2000
+2026-08-12 23:37:50.290 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2602200 qty=66
+2026-08-12 23:37:50.295 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 4 placed price=0.26022 qty=66.4000
+2026-08-12 23:37:50.629 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2644700 qty=78
+2026-08-12 23:37:50.636 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 5 placed price=0.26447 qty=78.4000
+2026-08-12 23:37:50.976 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2688500 qty=92
+2026-08-12 23:37:50.982 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 6 placed price=0.26885 qty=92.5000
+2026-08-12 23:37:51.298 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2733800 qty=109
+2026-08-12 23:37:51.305 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 7 placed price=0.27338 qty=109.2000
+2026-08-12 23:37:51.670 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL BTWUSDT price=0.2780700 qty=129
+2026-08-12 23:37:51.674 | DEBUG    | symbol_trader:_place_grid_orders:377 - BTWUSDT: limit order 8 placed price=0.27807 qty=128.8000
+2026-08-12 23:37:52.061 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY BTWUSDT triggerPrice=0.2381000 (closePosition=true)
+2026-08-12 23:37:52.071 | INFO     | symbol_trader:_place_take_profit:415 - BTWUSDT: TP Algo order placed stopPrice=0.2381 (algoId=3000002134762564)
+2026-08-12 23:37:52.072 | INFO     | symbol_trader:_wait_for_tp:431 - BTWUSDT: waiting for TP (listening to user-data WS + polling backup)…
+2026-08-12 23:51:53.115 | INFO     | symbol_trader:_poll_check_state:482 - BTWUSDT: REST poll detected filled limit order 1252864784
+2026-08-12 23:51:53.414 | INFO     | exchange:cancel_algo_order:199 - Cancelled algo order 3000002134762564 on BTWUSDT
+2026-08-12 23:51:53.698 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY BTWUSDT triggerPrice=0.2401100 (closePosition=true)
+2026-08-12 23:51:53.708 | INFO     | symbol_trader:_place_take_profit:415 - BTWUSDT: TP Algo order placed stopPrice=0.24011 (algoId=3000002134773097)
+2026-08-12 23:51:53.712 | INFO     | symbol_trader:_on_limit_filled:597 - BTWUSDT: limit 2/8 filled price=0.25213 avg=0.25038 tp=0.240114 (trailing=True) rev_dist=4.77% dep=22.03 exp_pnl=0.90

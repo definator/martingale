@@ -1,0 +1,23 @@
+{
+  "api_key": "****",
+  "api_secret": "****",
+  "use_testnet": false,
+
+  "telegram_enabled": true,
+  "telegram_bot_token": "****",
+  "telegram_chat_id": "****",
+
+  "symbols": [
+    {
+      "symbol": "BTWUSDT",
+      "start_deposit": 10.0,
+      "take_profit": 4.1,
+      "direction": "short",
+      "distance_pct": 12,
+      "multiplier": 1.2,
+      "orders_qty": 8,
+      "max_tries": 3,
+      "trailing_take_profit": true
+    }
+  ]
+}

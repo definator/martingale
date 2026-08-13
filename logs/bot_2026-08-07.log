@@ -1,0 +1,420 @@
+2026-08-07 17:12:09.752 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:14:43.139 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:14:43.162 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:14:44.316 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:14:45.474 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:14:46.023 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:14:46.023 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:14:46.025 | INFO     | symbol_trader:_run_cycle:200 - ACEUSDT: starting cycle 1/1
+2026-08-07 17:14:46.302 | INFO     | symbol_trader:_check_balance:246 - ACEUSDT: need 93.34 USDT margin, have 72.25 USDT
+2026-08-07 17:14:46.303 | ERROR    | symbol_trader:_run_cycle:214 - ACEUSDT: insufficient balance, aborting.
+2026-08-07 17:14:46.519 | INFO     | symbol_trader:run:193 - ACEUSDT: all 1 tries completed.
+2026-08-07 17:14:46.608 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:15:44.623 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:15:44.625 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:15:45.306 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:15:46.021 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:15:46.570 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:15:46.570 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:15:46.574 | INFO     | symbol_trader:_run_cycle:200 - ACEUSDT: starting cycle 1/1
+2026-08-07 17:15:46.853 | INFO     | symbol_trader:_check_balance:246 - ACEUSDT: need 46.67 USDT margin, have 72.25 USDT
+2026-08-07 17:15:47.733 | INFO     | exchange:place_market_order:135 - Market order placed: BUY ACEUSDT qty=884.98
+2026-08-07 17:15:48.532 | INFO     | symbol_trader:_open_market_entry:300 - ACEUSDT: market entry filled  price=0.11309  qty=884.9800  tp=0.117727
+2026-08-07 17:15:49.053 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.111360 qty=1077.58
+2026-08-07 17:15:49.064 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 2 placed  price=0.11136  qty=1077.5800
+2026-08-07 17:15:49.385 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.109630 qty=1313.50
+2026-08-07 17:15:49.391 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 3 placed  price=0.10963  qty=1313.5000
+2026-08-07 17:15:49.719 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.107910 qty=1601.33
+2026-08-07 17:15:49.733 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 4 placed  price=0.10791  qty=1601.3300
+2026-08-07 17:15:50.055 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.106180 qty=1952.91
+2026-08-07 17:15:50.064 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 5 placed  price=0.10618  qty=1952.9100
+2026-08-07 17:15:50.384 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.104450 qty=2382.30
+2026-08-07 17:15:50.401 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 6 placed  price=0.10445  qty=2382.3000
+2026-08-07 17:15:50.724 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.102730 qty=2906.63
+2026-08-07 17:15:50.741 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 7 placed  price=0.10273  qty=2906.6300
+2026-08-07 17:15:51.061 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 8: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:51.379 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 9: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:51.704 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 10: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:52.026 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 11: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:52.351 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 12: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:52.676 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 13: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:52.997 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 14: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:53.340 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 15: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:53.751 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 16: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:54.073 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 17: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:54.396 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 18: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:54.715 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 19: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:55.041 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 20: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:15:55.371 | ERROR    | symbol_trader:_place_take_profit:386 - ACEUSDT: failed to place TP: APIError(code=-4120): Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-08-07 17:15:55.372 | INFO     | symbol_trader:_wait_for_tp:397 - ACEUSDT: waiting for TP (listening to user-data WS)…
+2026-08-07 17:17:21.239 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-07 17:17:21.426 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-07 17:17:21.427 | INFO     | symbol_trader:_run_cycle:228 - ACEUSDT: cycle cancelled.
+2026-08-07 17:17:21.427 | INFO     | __main__:run_trader:123 - ACEUSDT: task cancelled.
+2026-08-07 17:17:21.427 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:17:25.320 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:17:25.322 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:17:25.975 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:17:26.775 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:17:27.616 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:17:27.616 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:17:27.621 | INFO     | symbol_trader:recover:134 - ACEUSDT: found open trade id=1 try=1
+2026-08-07 17:17:27.915 | WARNING  | symbol_trader:recover:140 - ACEUSDT: position gone, cleaning up orphan orders…
+2026-08-07 17:17:28.223 | INFO     | exchange:cancel_all_open_orders:194 - Cancelled all open orders for ACEUSDT
+2026-08-07 17:17:28.415 | INFO     | symbol_trader:run:193 - ACEUSDT: all 1 tries completed.
+2026-08-07 17:17:28.503 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:19:33.282 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:19:33.284 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:19:33.886 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:19:34.575 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:19:35.200 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:19:35.200 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:19:35.204 | INFO     | symbol_trader:_run_cycle:200 - ACEUSDT: starting cycle 1/1
+2026-08-07 17:19:35.480 | INFO     | symbol_trader:_check_balance:246 - ACEUSDT: need 46.67 USDT margin, have 73.37 USDT
+2026-08-07 17:19:36.042 | INFO     | exchange:place_market_order:135 - Market order placed: BUY ACEUSDT qty=868.65
+2026-08-07 17:19:36.888 | INFO     | symbol_trader:_open_market_entry:300 - ACEUSDT: market entry filled  price=0.11498  qty=868.6500  tp=0.119694
+2026-08-07 17:19:37.367 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.113220 qty=1059.88
+2026-08-07 17:19:37.377 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 2 placed  price=0.11322  qty=1059.8800
+2026-08-07 17:19:37.703 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.111460 qty=1291.94
+2026-08-07 17:19:37.713 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 3 placed  price=0.11146  qty=1291.9400
+2026-08-07 17:19:38.035 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.109710 qty=1575.06
+2026-08-07 17:19:38.042 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 4 placed  price=0.10971  qty=1575.0600
+2026-08-07 17:19:38.362 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.107950 qty=1920.88
+2026-08-07 17:19:38.367 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 5 placed  price=0.10795  qty=1920.8800
+2026-08-07 17:19:38.686 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.106200 qty=2343.05
+2026-08-07 17:19:38.693 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 6 placed  price=0.1062  qty=2343.0500
+2026-08-07 17:19:39.015 | INFO     | exchange:place_limit_order:153 - Limit order placed: BUY ACEUSDT price=0.104440 qty=2859.04
+2026-08-07 17:19:39.019 | DEBUG    | symbol_trader:_place_grid_orders:346 - ACEUSDT: limit order 7 placed  price=0.10444  qty=2859.0400
+2026-08-07 17:19:39.342 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 8: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:39.662 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 9: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:40.002 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 10: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:40.320 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 11: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:40.646 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 12: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:40.963 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 13: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:41.281 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 14: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:41.603 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 15: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:41.929 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 16: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:42.254 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 17: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:42.572 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 18: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:42.900 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 19: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:43.222 | ERROR    | symbol_trader:_place_grid_orders:349 - ACEUSDT: failed to place limit order 20: APIError(code=-2019): Margin is insufficient.
+2026-08-07 17:19:43.543 | ERROR    | symbol_trader:_place_take_profit:386 - ACEUSDT: failed to place TP: APIError(code=-4120): Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-08-07 17:19:43.543 | INFO     | symbol_trader:_wait_for_tp:397 - ACEUSDT: waiting for TP (listening to user-data WS)…
+2026-08-07 17:21:02.790 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-07 17:21:02.978 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-07 17:21:02.978 | INFO     | symbol_trader:_run_cycle:228 - ACEUSDT: cycle cancelled.
+2026-08-07 17:21:02.979 | INFO     | __main__:run_trader:123 - ACEUSDT: task cancelled.
+2026-08-07 17:21:02.979 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:30:56.925 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:30:56.927 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:30:57.543 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:30:58.534 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:30:59.082 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:30:59.083 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:30:59.084 | INFO     | symbol_trader:recover:134 - ACEUSDT: found open trade id=2 try=1
+2026-08-07 17:30:59.656 | WARNING  | symbol_trader:recover:140 - ACEUSDT: position gone, cleaning up orphan orders…
+2026-08-07 17:30:59.936 | INFO     | exchange:cancel_all_open_orders:192 - Cancelled all open orders for ACEUSDT
+2026-08-07 17:31:00.225 | INFO     | symbol_trader:run:193 - ACEUSDT: all 1 tries completed.
+2026-08-07 17:31:00.378 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:31:05.863 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:31:05.865 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:31:06.471 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:31:07.394 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:31:09.124 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:31:09.124 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:31:09.129 | INFO     | symbol_trader:_run_cycle:200 - ACEUSDT: starting cycle 1/1
+2026-08-07 17:31:10.277 | INFO     | symbol_trader:_check_balance:253 - ACEUSDT: balance check — need 46.6720 USDT margin (20x lev, total notional 933.44), have 74.0565 USDT
+2026-08-07 17:31:10.883 | ERROR    | symbol_trader:_run_cycle:234 - ACEUSDT: cycle error: APIError(code=-4164): Order's notional must be no smaller than 5 (unless you choose reduce only).
+Traceback (most recent call last):
+
+  File "/home/definator/agy/martingale_v1/main.py", line 152, in <module>
+    asyncio.run(main(args.config))
+
+  File "/usr/lib/python3.14/asyncio/runners.py", line 205, in run
+    return runner.run(main)
+  File "/usr/lib/python3.14/asyncio/runners.py", line 128, in run
+    return self._loop.run_until_complete(task)
+  File "/usr/lib/python3.14/asyncio/base_events.py", line 706, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.14/asyncio/base_events.py", line 677, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.14/asyncio/base_events.py", line 2056, in _run_once
+    handle._run()
+  File "/usr/lib/python3.14/asyncio/events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+
+  File "/home/definator/agy/martingale_v1/main.py", line 121, in run_trader
+    await trader.run()
+
+  File "/home/definator/agy/martingale_v1/symbol_trader.py", line 191, in run
+    await self._run_cycle()
+
+> File "/home/definator/agy/martingale_v1/symbol_trader.py", line 222, in _run_cycle
+    await self._open_market_entry()
+
+  File "/home/definator/agy/martingale_v1/symbol_trader.py", line 277, in _open_market_entry
+    order = await ex.place_market_order(
+
+  File "/home/definator/agy/martingale_v1/exchange.py", line 129, in place_market_order
+    order = await client.futures_create_order(
+
+  File "/home/definator/agy/martingale_v1/venv/lib/python3.14/site-packages/binance/client.py", line 8943, in futures_create_order
+    return await self._request_futures_api('post', 'order', True, data=params)
+  File "/home/definator/agy/martingale_v1/venv/lib/python3.14/site-packages/binance/client.py", line 7921, in _request_futures_api
+    return await self._request(method, uri, signed, True, **kwargs)
+  File "/home/definator/agy/martingale_v1/venv/lib/python3.14/site-packages/binance/client.py", line 7899, in _request
+    return await self._handle_response(response)
+  File "/home/definator/agy/martingale_v1/venv/lib/python3.14/site-packages/binance/client.py", line 7907, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+
+binance.exceptions.BinanceAPIException: APIError(code=-4164): Order's notional must be no smaller than 5 (unless you choose reduce only).
+2026-08-07 17:31:11.086 | INFO     | symbol_trader:run:193 - ACEUSDT: all 1 tries completed.
+2026-08-07 17:31:11.174 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:34:04.085 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:34:04.086 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:34:04.825 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:34:05.698 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:34:06.274 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:34:06.274 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:34:06.277 | INFO     | symbol_trader:recover:134 - ACEUSDT: found open trade id=3 try=1
+2026-08-07 17:34:06.549 | WARNING  | symbol_trader:recover:140 - ACEUSDT: position gone, cleaning up orphan orders…
+2026-08-07 17:34:06.820 | INFO     | exchange:cancel_all_open_orders:207 - Cancelled all open orders for ACEUSDT
+2026-08-07 17:34:07.062 | INFO     | symbol_trader:run:193 - ACEUSDT: all 1 tries completed.
+2026-08-07 17:34:07.184 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:34:11.567 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:34:11.568 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:34:12.187 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:34:12.961 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:34:13.526 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:34:13.527 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:34:13.532 | INFO     | symbol_trader:_run_cycle:200 - ACEUSDT: starting cycle 1/1
+2026-08-07 17:34:14.086 | INFO     | symbol_trader:_check_balance:253 - ACEUSDT: balance check — need 46.6720 USDT margin (20x lev, total notional 933.44), have 74.0565 USDT
+2026-08-07 17:34:14.710 | INFO     | exchange:place_market_order:150 - Market order placed: BUY ACEUSDT qty=44.71
+2026-08-07 17:34:15.502 | INFO     | symbol_trader:_open_market_entry:308 - ACEUSDT: market entry filled  price=0.11188  qty=44.7100  tp=0.116467
+2026-08-07 17:34:15.984 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.110170 qty=54.46
+2026-08-07 17:34:15.992 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 2 placed  price=0.11017  qty=54.4600
+2026-08-07 17:34:16.316 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.108460 qty=66.38
+2026-08-07 17:34:16.324 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 3 placed  price=0.10846  qty=66.3800
+2026-08-07 17:34:16.646 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.106750 qty=80.93
+2026-08-07 17:34:16.654 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 4 placed  price=0.10675  qty=80.9300
+2026-08-07 17:34:16.974 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.105040 qty=98.70
+2026-08-07 17:34:16.981 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 5 placed  price=0.10504  qty=98.7000
+2026-08-07 17:34:17.304 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.103330 qty=120.40
+2026-08-07 17:34:17.317 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 6 placed  price=0.10333  qty=120.4000
+2026-08-07 17:34:17.635 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.101630 qty=146.90
+2026-08-07 17:34:17.643 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 7 placed  price=0.10163  qty=146.9000
+2026-08-07 17:34:17.974 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.099920 qty=179.30
+2026-08-07 17:34:17.981 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 8 placed  price=0.09992  qty=179.3000
+2026-08-07 17:34:18.308 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.098210 qty=218.90
+2026-08-07 17:34:18.320 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 9 placed  price=0.09821  qty=218.9000
+2026-08-07 17:34:18.648 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.096500 qty=267.34
+2026-08-07 17:34:18.677 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 10 placed  price=0.0965  qty=267.3400
+2026-08-07 17:34:19.011 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.094790 qty=326.60
+2026-08-07 17:34:19.015 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 11 placed  price=0.09479  qty=326.6000
+2026-08-07 17:34:19.354 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.093090 qty=399.08
+2026-08-07 17:34:19.361 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 12 placed  price=0.09309  qty=399.0800
+2026-08-07 17:34:19.697 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.091380 qty=487.85
+2026-08-07 17:34:19.708 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 13 placed  price=0.09138  qty=487.8500
+2026-08-07 17:34:20.028 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.089670 qty=596.59
+2026-08-07 17:34:20.034 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 14 placed  price=0.08967  qty=596.5900
+2026-08-07 17:34:20.358 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.087960 qty=729.83
+2026-08-07 17:34:20.365 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 15 placed  price=0.08796  qty=729.8300
+2026-08-07 17:34:20.685 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.086250 qty=893.16
+2026-08-07 17:34:20.692 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 16 placed  price=0.08625  qty=893.1600
+2026-08-07 17:34:21.018 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.084550 qty=1093.34
+2026-08-07 17:34:21.022 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 17 placed  price=0.08455  qty=1093.3400
+2026-08-07 17:34:21.343 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.082840 qty=1339.09
+2026-08-07 17:34:21.351 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 18 placed  price=0.08284  qty=1339.0900
+2026-08-07 17:34:21.671 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.081130 qty=1640.78
+2026-08-07 17:34:21.679 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 19 placed  price=0.08113  qty=1640.7800
+2026-08-07 17:34:22.009 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.079420 qty=2011.33
+2026-08-07 17:34:22.013 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 20 placed  price=0.07942  qty=2011.3300
+2026-08-07 17:34:22.484 | ERROR    | symbol_trader:_place_take_profit:394 - ACEUSDT: failed to place TP: APIError(code=-4120): Order type not supported for this endpoint. Please use the Algo Order API endpoints instead.
+2026-08-07 17:34:22.484 | INFO     | symbol_trader:_wait_for_tp:405 - ACEUSDT: waiting for TP (listening to user-data WS)…
+2026-08-07 17:56:18.764 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:56:18.767 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:56:19.444 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:56:20.144 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:56:20.774 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:56:20.775 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:56:20.781 | INFO     | symbol_trader:recover:134 - ACEUSDT: found open trade id=4 try=1
+2026-08-07 17:56:21.057 | WARNING  | symbol_trader:recover:140 - ACEUSDT: position gone, cleaning up orphan orders…
+2026-08-07 17:56:21.336 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for ACEUSDT
+2026-08-07 17:56:21.981 | INFO     | symbol_trader:run:193 - ACEUSDT: all 1 tries completed.
+2026-08-07 17:56:22.123 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:57:00.440 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-07 17:57:00.641 | INFO     | symbol_trader:_run_cycle:231 - ACEUSDT: cycle cancelled.
+2026-08-07 17:57:00.642 | INFO     | __main__:run_trader:123 - ACEUSDT: task cancelled.
+2026-08-07 17:57:00.642 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 17:57:45.742 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 17:57:45.744 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 17:57:46.504 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 17:57:47.310 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 17:57:47.852 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 17:57:47.852 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 17:57:47.856 | INFO     | symbol_trader:_run_cycle:200 - ACEUSDT: starting cycle 1/1
+2026-08-07 17:57:48.422 | INFO     | symbol_trader:_check_balance:253 - ACEUSDT: balance check — need 46.6720 USDT margin (20x lev, total notional 933.44), have 74.4635 USDT
+2026-08-07 17:57:49.090 | INFO     | exchange:place_market_order:150 - Market order placed: BUY ACEUSDT qty=44.15
+2026-08-07 17:57:49.903 | INFO     | symbol_trader:_open_market_entry:308 - ACEUSDT: market entry filled  price=0.11323  qty=44.1500  tp=0.117872
+2026-08-07 17:57:50.398 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.111500 qty=53.81
+2026-08-07 17:57:50.406 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 2 placed  price=0.1115  qty=53.8100
+2026-08-07 17:57:50.727 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.109770 qty=65.59
+2026-08-07 17:57:50.740 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 3 placed  price=0.10977  qty=65.5900
+2026-08-07 17:57:51.061 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.108040 qty=79.97
+2026-08-07 17:57:51.066 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 4 placed  price=0.10804  qty=79.9700
+2026-08-07 17:57:51.407 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.106310 qty=97.52
+2026-08-07 17:57:51.418 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 5 placed  price=0.10631  qty=97.5200
+2026-08-07 17:57:51.738 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.104580 qty=118.96
+2026-08-07 17:57:51.749 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 6 placed  price=0.10458  qty=118.9600
+2026-08-07 17:57:52.077 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.102850 qty=145.16
+2026-08-07 17:57:52.083 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 7 placed  price=0.10285  qty=145.1600
+2026-08-07 17:57:52.727 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.101120 qty=177.17
+2026-08-07 17:57:52.739 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 8 placed  price=0.10112  qty=177.1700
+2026-08-07 17:57:53.064 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.099400 qty=216.28
+2026-08-07 17:57:53.068 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 9 placed  price=0.0994  qty=216.2800
+2026-08-07 17:57:53.394 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.097670 qty=264.14
+2026-08-07 17:57:53.402 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 10 placed  price=0.09767  qty=264.1400
+2026-08-07 17:57:53.728 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.095940 qty=322.68
+2026-08-07 17:57:53.737 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 11 placed  price=0.09594  qty=322.6800
+2026-08-07 17:57:54.067 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.094210 qty=394.33
+2026-08-07 17:57:54.072 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 12 placed  price=0.09421  qty=394.3300
+2026-08-07 17:57:54.391 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.092480 qty=482.05
+2026-08-07 17:57:54.399 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 13 placed  price=0.09248  qty=482.0500
+2026-08-07 17:57:54.718 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.090750 qty=589.49
+2026-08-07 17:57:54.729 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 14 placed  price=0.09075  qty=589.4900
+2026-08-07 17:57:55.050 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.089020 qty=721.14
+2026-08-07 17:57:55.055 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 15 placed  price=0.08902  qty=721.1400
+2026-08-07 17:57:55.375 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.087290 qty=882.51
+2026-08-07 17:57:55.389 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 16 placed  price=0.08729  qty=882.5100
+2026-08-07 17:57:55.713 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.085570 qty=1080.31
+2026-08-07 17:57:55.724 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 17 placed  price=0.08557  qty=1080.3100
+2026-08-07 17:57:56.045 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.083840 qty=1323.12
+2026-08-07 17:57:56.048 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 18 placed  price=0.08384  qty=1323.1200
+2026-08-07 17:57:56.376 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.082110 qty=1621.19
+2026-08-07 17:57:56.386 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 19 placed  price=0.08211  qty=1621.1900
+2026-08-07 17:57:56.706 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ACEUSDT price=0.080380 qty=1987.31
+2026-08-07 17:57:56.716 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 20 placed  price=0.08038  qty=1987.3100
+2026-08-07 17:57:57.047 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: SELL ACEUSDT triggerPrice=0.117870 (closePosition=true)
+2026-08-07 17:57:57.054 | INFO     | symbol_trader:_place_take_profit:393 - ACEUSDT: TP Algo order placed  stopPrice=0.11787 (algoId=3000002126279508)
+2026-08-07 17:57:57.054 | INFO     | symbol_trader:_wait_for_tp:409 - ACEUSDT: waiting for TP (listening to user-data WS)…
+2026-08-07 20:20:09.550 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-07 20:20:09.757 | INFO     | symbol_trader:_run_cycle:231 - ACEUSDT: cycle cancelled.
+2026-08-07 20:20:09.757 | INFO     | __main__:run_trader:123 - ACEUSDT: task cancelled.
+2026-08-07 20:20:09.758 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 20:20:32.756 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 20:20:32.758 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 20:20:33.442 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 20:20:34.204 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 20:20:34.759 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 20:20:34.759 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 20:20:34.764 | INFO     | symbol_trader:recover:134 - ACEUSDT: found open trade id=5 try=1
+2026-08-07 20:20:35.038 | WARNING  | symbol_trader:recover:140 - ACEUSDT: position gone, cleaning up orphan orders…
+2026-08-07 20:20:35.328 | INFO     | exchange:cancel_all_open_orders:233 - Cancelled all open limit orders for ACEUSDT
+2026-08-07 20:20:35.835 | INFO     | symbol_trader:run:193 - ACEUSDT: all 1 tries completed.
+2026-08-07 20:20:35.922 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 20:20:42.684 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 20:20:42.685 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 20:20:43.296 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 20:20:44.477 | INFO     | symbol_trader:initialize:109 - ACEUSDT: margin mode set to CROSS
+2026-08-07 20:20:45.019 | INFO     | symbol_trader:initialize:116 - ACEUSDT: leverage set to 20x
+2026-08-07 20:20:45.020 | INFO     | __main__:main:98 - Trader initialized for ACEUSDT
+2026-08-07 20:20:45.023 | INFO     | symbol_trader:_run_cycle:200 - ACEUSDT: starting cycle 1/1
+2026-08-07 20:20:45.577 | INFO     | symbol_trader:_check_balance:253 - ACEUSDT: balance check — need 46.6720 USDT margin (20x lev, total notional 933.44), have 76.1252 USDT
+2026-08-07 20:20:46.126 | INFO     | exchange:place_market_order:150 - Market order placed: SELL ACEUSDT qty=40.95
+2026-08-07 20:20:46.917 | INFO     | symbol_trader:_open_market_entry:308 - ACEUSDT: market entry filled  price=0.12238  qty=40.9500  tp=0.117362
+2026-08-07 20:20:47.369 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.124240 qty=48.29
+2026-08-07 20:20:47.380 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 2 placed  price=0.12424  qty=48.2900
+2026-08-07 20:20:47.712 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.126170 qty=57.06
+2026-08-07 20:20:47.719 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 3 placed  price=0.12617  qty=57.0600
+2026-08-07 20:20:48.043 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.128160 qty=67.41
+2026-08-07 20:20:48.048 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 4 placed  price=0.12816  qty=67.4100
+2026-08-07 20:20:48.368 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.130210 qty=79.62
+2026-08-07 20:20:48.375 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 5 placed  price=0.13021  qty=79.6200
+2026-08-07 20:20:48.700 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.132320 qty=94.02
+2026-08-07 20:20:48.707 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 6 placed  price=0.13232  qty=94.0200
+2026-08-07 20:20:49.029 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.134510 qty=110.99
+2026-08-07 20:20:49.036 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 7 placed  price=0.13451  qty=110.9900
+2026-08-07 20:20:49.355 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.136770 qty=130.99
+2026-08-07 20:20:49.363 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 8 placed  price=0.13677  qty=130.9900
+2026-08-07 20:20:49.718 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.139110 qty=154.54
+2026-08-07 20:20:49.725 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 9 placed  price=0.13911  qty=154.5400
+2026-08-07 20:20:50.043 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.141530 qty=182.28
+2026-08-07 20:20:50.051 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 10 placed  price=0.14153  qty=182.2800
+2026-08-07 20:20:50.371 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.144040 qty=214.93
+2026-08-07 20:20:50.377 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 11 placed  price=0.14404  qty=214.9300
+2026-08-07 20:20:50.699 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.146630 qty=253.36
+2026-08-07 20:20:50.703 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 12 placed  price=0.14663  qty=253.3600
+2026-08-07 20:20:51.023 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.149320 qty=298.55
+2026-08-07 20:20:51.032 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 13 placed  price=0.14932  qty=298.5500
+2026-08-07 20:20:51.355 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.152110 qty=351.69
+2026-08-07 20:20:51.362 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 14 placed  price=0.15211  qty=351.6900
+2026-08-07 20:20:51.680 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.155010 qty=414.14
+2026-08-07 20:20:51.690 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 15 placed  price=0.15501  qty=414.1400
+2026-08-07 20:20:52.010 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.158020 qty=487.50
+2026-08-07 20:20:52.017 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 16 placed  price=0.15802  qty=487.5000
+2026-08-07 20:20:52.340 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.161150 qty=573.64
+2026-08-07 20:20:52.347 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 17 placed  price=0.16115  qty=573.6400
+2026-08-07 20:20:52.670 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.164400 qty=674.76
+2026-08-07 20:20:52.680 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 18 placed  price=0.1644  qty=674.7600
+2026-08-07 20:20:53.005 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.167790 qty=793.35
+2026-08-07 20:20:53.011 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 19 placed  price=0.16779  qty=793.3500
+2026-08-07 20:20:53.354 | INFO     | exchange:place_limit_order:168 - Limit order placed: SELL ACEUSDT price=0.171330 qty=932.35
+2026-08-07 20:20:53.360 | DEBUG    | symbol_trader:_place_grid_orders:355 - ACEUSDT: limit order 20 placed  price=0.17133  qty=932.3500
+2026-08-07 20:20:53.700 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: BUY ACEUSDT triggerPrice=0.117360 (closePosition=true)
+2026-08-07 20:20:53.717 | INFO     | symbol_trader:_place_take_profit:393 - ACEUSDT: TP Algo order placed  stopPrice=0.11736 (algoId=3000002126493630)
+2026-08-07 20:20:53.718 | INFO     | symbol_trader:_wait_for_tp:409 - ACEUSDT: waiting for TP (listening to user-data WS)…
+2026-08-07 20:50:20.482 | INFO     | __main__:_handle_signal:105 - Shutdown signal received.
+2026-08-07 20:50:20.690 | INFO     | symbol_trader:_run_cycle:231 - ACEUSDT: cycle cancelled.
+2026-08-07 20:50:20.690 | INFO     | __main__:run_trader:123 - ACEUSDT: task cancelled.
+2026-08-07 20:50:20.691 | INFO     | __main__:main:136 - Bot stopped. Binance connection closed.
+2026-08-07 20:50:23.374 | INFO     | __main__:main:65 - Config loaded from config.json
+2026-08-07 20:50:23.375 | INFO     | db:init_db:78 - Database initialised at bot_state.db
+2026-08-07 20:50:24.068 | INFO     | __main__:main:78 - Binance client ready  testnet=False
+2026-08-07 20:50:25.244 | INFO     | symbol_trader:initialize:109 - ONUSDT: margin mode set to CROSS
+2026-08-07 20:50:25.796 | INFO     | symbol_trader:initialize:116 - ONUSDT: leverage set to 50x
+2026-08-07 20:50:25.796 | INFO     | __main__:main:98 - Trader initialized for ONUSDT
+2026-08-07 20:50:25.798 | INFO     | symbol_trader:_run_cycle:200 - ONUSDT: starting cycle 1/1
+2026-08-07 20:50:26.349 | INFO     | symbol_trader:_check_balance:253 - ONUSDT: balance check — need 18.6688 USDT margin (50x lev, total notional 933.44), have 76.8505 USDT
+2026-08-07 20:50:26.926 | INFO     | exchange:place_market_order:150 - Market order placed: BUY ONUSDT qty=16
+2026-08-07 20:50:27.732 | INFO     | symbol_trader:_open_market_entry:308 - ONUSDT: market entry filled  price=0.330546  qty=16.0000  tp=0.344099
+2026-08-07 20:50:28.283 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.3254900 qty=18
+2026-08-07 20:50:28.288 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 2 placed  price=0.32549  qty=18.4000
+2026-08-07 20:50:28.617 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.3204500 qty=22
+2026-08-07 20:50:28.625 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 3 placed  price=0.32045  qty=22.4000
+2026-08-07 20:50:28.946 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.3154000 qty=27
+2026-08-07 20:50:28.956 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 4 placed  price=0.3154  qty=27.3000
+2026-08-07 20:50:29.277 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.3103600 qty=33
+2026-08-07 20:50:29.285 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 5 placed  price=0.31036  qty=33.4000
+2026-08-07 20:50:29.607 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.3053100 qty=41
+2026-08-07 20:50:29.617 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 6 placed  price=0.30531  qty=40.7000
+2026-08-07 20:50:29.939 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.3002600 qty=50
+2026-08-07 20:50:29.952 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 7 placed  price=0.30026  qty=49.7000
+2026-08-07 20:50:30.291 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2952200 qty=61
+2026-08-07 20:50:30.300 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 8 placed  price=0.29522  qty=60.6000
+2026-08-07 20:50:30.640 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2901700 qty=74
+2026-08-07 20:50:30.649 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 9 placed  price=0.29017  qty=74.0000
+2026-08-07 20:50:30.973 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2851200 qty=90
+2026-08-07 20:50:30.984 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 10 placed  price=0.28512  qty=90.4000
+2026-08-07 20:50:31.305 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2800800 qty=110
+2026-08-07 20:50:31.314 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 11 placed  price=0.28008  qty=110.5000
+2026-08-07 20:50:31.637 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2750300 qty=135
+2026-08-07 20:50:31.646 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 12 placed  price=0.27503  qty=135.0000
+2026-08-07 20:50:31.968 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2699800 qty=165
+2026-08-07 20:50:31.974 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 13 placed  price=0.26998  qty=165.1000
+2026-08-07 20:50:32.293 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2649400 qty=202
+2026-08-07 20:50:32.299 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 14 placed  price=0.26494  qty=201.9000
+2026-08-07 20:50:32.655 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2598900 qty=247
+2026-08-07 20:50:32.663 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 15 placed  price=0.25989  qty=247.0000
+2026-08-07 20:50:33.004 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2548400 qty=302
+2026-08-07 20:50:33.014 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 16 placed  price=0.25484  qty=302.2000
+2026-08-07 20:50:33.333 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2498000 qty=370
+2026-08-07 20:50:33.341 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 17 placed  price=0.2498  qty=370.0000
+2026-08-07 20:50:33.709 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2447500 qty=453
+2026-08-07 20:50:33.714 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 18 placed  price=0.24475  qty=453.2000
+2026-08-07 20:50:34.035 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2397000 qty=555
+2026-08-07 20:50:34.047 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 19 placed  price=0.2397  qty=555.3000
+2026-08-07 20:50:34.366 | INFO     | exchange:place_limit_order:168 - Limit order placed: BUY ONUSDT price=0.2346600 qty=681
+2026-08-07 20:50:34.374 | DEBUG    | symbol_trader:_place_grid_orders:355 - ONUSDT: limit order 20 placed  price=0.23466  qty=680.7000
+2026-08-07 20:50:34.708 | INFO     | exchange:place_take_profit_algo:191 - TP Algo order placed: SELL ONUSDT triggerPrice=0.3440900 (closePosition=true)
+2026-08-07 20:50:34.720 | INFO     | symbol_trader:_place_take_profit:393 - ONUSDT: TP Algo order placed  stopPrice=0.34409 (algoId=3000002126530382)
+2026-08-07 20:50:34.721 | INFO     | symbol_trader:_wait_for_tp:409 - ONUSDT: waiting for TP (listening to user-data WS)…
