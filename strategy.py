@@ -6,10 +6,12 @@ Responsible for:
   2. Computing order sizes (geometric progression with multiplier)
   3. Managing average entry price as grid orders fill
   4. Computing take-profit price from average entry
+  5. specifyEveryOrder mode: explicit per-level distance and size arrays
 """
 
 from __future__ import annotations
 import math
+from dataclasses import dataclass, field
 
 
 # ─────────────────────────────────────────────────────────────
@@ -85,6 +87,37 @@ def compute_grid_prices(
         return prices
 
 
+def compute_grid_prices_explicit(
+    start_price: float,
+    direction: str,
+    order_specs: list[dict],
+) -> list[float]:
+    """
+    Compute grid prices when specifyEveryOrder=True.
+
+    order_specs is a list of dicts, each with:
+        distancePct  – distance from previous level as % of previous level price
+        priceDiffPct – size multiplier (not used here; used in compute_order_sizes_explicit)
+
+    Index 0 = start_price (market entry, already filled).
+    Index k = price of limit order k (1-based in order_specs).
+
+    For LONG: each next level is distancePct% BELOW the previous level price.
+    For SHORT: each next level is distancePct% ABOVE the previous level price.
+    """
+    prices = [start_price]
+    prev = start_price
+    for spec in order_specs:
+        dist = float(spec["distancePct"]) / 100.0
+        if direction.lower() == "long":
+            nxt = prev * (1.0 - dist)
+        else:
+            nxt = prev * (1.0 + dist)
+        prices.append(nxt)
+        prev = nxt
+    return prices
+
+
 def compute_order_sizes(
     start_deposit: float,
     multiplier: float,
@@ -104,8 +137,32 @@ def compute_order_sizes(
     return sizes
 
 
+def compute_order_sizes_explicit(
+    start_deposit: float,
+    order_specs: list[dict],
+) -> list[float]:
+    """
+    Compute order sizes in USDT when specifyEveryOrder=True.
+
+    sizes[0] = start_deposit (market order, index 0)
+    For limit k (0-based index into order_specs):
+        sizes[k+1] = sizes[k] * (1 + priceDiffPct/100)
+        i.e. each limit order's notional = previous order notional * (priceDiffPct factor)
+
+    Per spec:
+        order1 is placed on priceDiffPct times larger than start_deposit.
+        order2 is placed on priceDiffPct times larger than order1. Etc.
+    So sizes[k+1] = sizes[k] * priceDiffPct_factor where factor = priceDiffPct from spec.
+    """
+    sizes = [start_deposit]
+    for spec in order_specs:
+        factor = float(spec["priceDiffPct"])
+        sizes.append(sizes[-1] * factor)
+    return sizes
+
+
 # ─────────────────────────────────────────────────────────────
-# Average entry tracking
+# Average entry tracking (incremental)
 # ─────────────────────────────────────────────────────────────
 
 def compute_average_entry(
@@ -117,6 +174,23 @@ def compute_average_entry(
     if total_qty == 0:
         return 0.0
     return total_value / total_qty
+
+
+def incremental_average_entry(
+    prev_total_qty: float,
+    prev_total_value: float,  # sum of (price * qty) so far
+    new_fill_price: float,
+    new_fill_qty: float,
+) -> tuple[float, float, float]:
+    """
+    Update running average entry without re-scanning all filled orders.
+
+    Returns (new_avg_entry, new_total_qty, new_total_value).
+    """
+    new_total_qty   = prev_total_qty + new_fill_qty
+    new_total_value = prev_total_value + new_fill_price * new_fill_qty
+    new_avg = new_total_value / new_total_qty if new_total_qty > 0 else 0.0
+    return new_avg, new_total_qty, new_total_value
 
 
 def total_filled_qty(filled_orders: list[tuple[float, float]]) -> float:
@@ -167,4 +241,3 @@ def expected_profit_usdt(
         else:
             pnl += (entry_p - tp_price) * qty
     return pnl
-

@@ -2,12 +2,23 @@
 exchange.py – Thin async wrapper around Binance UM Futures REST + WebSocket.
 
 Uses python-binance's AsyncClient internally so every call is non-blocking.
+
+Key optimisations vs original:
+  - place_market_order uses newOrderRespType=RESULT so avgPrice is returned directly.
+  - place_batch_orders supports POST /fapi/v1/batchOrders (up to 5 per call).
+  - HTTP session is reused across calls (AsyncClient manages the pool internally).
+  - No new sessions are created per request.
 """
 
 import asyncio
+import hashlib
+import hmac
+import json
 import math
+import time
 from decimal import Decimal, ROUND_DOWN
 from typing import Any
+from urllib.parse import urlencode
 
 from binance import AsyncClient, BinanceSocketManager
 from binance.exceptions import BinanceAPIException
@@ -23,7 +34,6 @@ async def make_client(api_key: str, api_secret: str, testnet: bool) -> AsyncClie
         api_secret=api_secret,
         testnet=testnet,
     )
-    # Switch to futures endpoints if needed (handled automatically by python-binance)
     return client
 
 
@@ -64,7 +74,6 @@ def extract_filters(symbol_info: dict) -> dict:
 def round_price(price: float, tick_size: float) -> float:
     if tick_size is None or tick_size == 0:
         return price
-    precision = max(0, round(-math.log10(tick_size)))
     return float(Decimal(str(price)).quantize(Decimal(str(tick_size)), rounding=ROUND_DOWN))
 
 
@@ -135,29 +144,38 @@ async def get_futures_position(client: AsyncClient, symbol: str) -> dict | None:
 
 
 # ─────────────────────────────────────────────────────────────
-# Order placement
+# Order placement – single orders
 # ─────────────────────────────────────────────────────────────
 async def place_market_order(client: AsyncClient, symbol: str, side: str,
                               qty: float, qty_precision: int) -> dict:
-    """Place a market order. side: 'BUY' | 'SELL'"""
+    """
+    Place a market order with newOrderRespType=RESULT.
+
+    With RESULT, Binance returns avgPrice and executedQty in the response
+    body itself – no follow-up GET /fapi/v1/order is needed.
+    """
     qty_str = f"{qty:.{qty_precision}f}"
     order = await client.futures_create_order(
         symbol=symbol,
         side=side,
         type="MARKET",
         quantity=qty_str,
+        newOrderRespType="RESULT",   # ← returns avgPrice immediately
     )
-    logger.info("Market order placed: {} {} qty={}", side, symbol, qty_str)
+    logger.info("Market order placed: {} {} qty={} avgPrice={} status={}",
+                side, symbol, qty_str,
+                order.get("avgPrice", "?"), order.get("status", "?"))
     return order
 
 
 async def place_limit_order(client: AsyncClient, symbol: str, side: str,
                              price: float, qty: float,
-                             price_precision: int, qty_precision: int) -> dict:
-    """Place a reduce-only or normal limit order."""
+                             price_precision: int, qty_precision: int,
+                             client_order_id: str | None = None) -> dict:
+    """Place a limit GTC order. Optionally pass a client_order_id for idempotency."""
     price_str = f"{price:.{price_precision}f}"
-    qty_str = f"{qty:.{qty_precision}f}"
-    order = await client.futures_create_order(
+    qty_str   = f"{qty:.{qty_precision}f}"
+    kwargs: dict[str, Any] = dict(
         symbol=symbol,
         side=side,
         type="LIMIT",
@@ -165,20 +183,116 @@ async def place_limit_order(client: AsyncClient, symbol: str, side: str,
         quantity=qty_str,
         timeInForce="GTC",
     )
-    logger.info("Limit order placed: {} {} price={} qty={}", side, symbol, price_str, qty_str)
+    if client_order_id:
+        kwargs["newClientOrderId"] = client_order_id
+    order = await client.futures_create_order(**kwargs)
+    logger.info("Limit order placed: {} {} price={} qty={} orderId={}",
+                side, symbol, price_str, qty_str, order.get("orderId"))
     return order
 
 
+# ─────────────────────────────────────────────────────────────
+# Batch order placement (POST /fapi/v1/batchOrders)
+# ─────────────────────────────────────────────────────────────
+async def place_batch_orders(client: AsyncClient, orders: list[dict]) -> list[dict]:
+    """
+    Submit up to 5 orders in a single POST /fapi/v1/batchOrders request.
+
+    `orders` is a list of order parameter dicts (same fields as futures_create_order).
+    Returns a list of individual order results (may include per-order errors).
+
+    Raises BinanceAPIException for top-level API errors (auth, rate limit, etc.).
+    Per-order errors are embedded in the response list with a 'code' key < 0.
+    """
+    if not orders:
+        return []
+    if len(orders) > 5:
+        raise ValueError("Binance batchOrders accepts at most 5 orders per request")
+
+    batch_list = json.dumps(orders)
+    
+    # Binance requires batchOrders JSON to be URL-encoded BEFORE signing.
+    # python-binance signs the raw string, causing signature mismatch after aiohttp encodes it.
+    # We construct the query string manually and POST it as a raw string.
+    timestamp = int(time.time() * 1000 + client.timestamp_offset)
+    query_string = urlencode({
+        "batchOrders": batch_list,
+        "timestamp": timestamp,
+        "recvWindow": 5000,
+    })
+    
+    sig_func = client._hmac_signature
+    if getattr(client, 'PRIVATE_KEY', None):
+        sig_func = client._rsa_signature
+    signature = sig_func(query_string)
+
+    payload = f"{query_string}&signature={signature}"
+    url = client._create_futures_api_uri("batchOrders")
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-MBX-APIKEY": client.API_KEY
+    }
+    
+    async with client.session.post(url, data=payload, headers=headers) as response:
+        result = await client._handle_response(response)
+
+    # Binance returns a list – each item is either a normal order dict or an error dict
+    if not isinstance(result, list):
+        logger.error("Unexpected batchOrders response type: {}", type(result))
+        return []
+    return result
+
+
+async def place_batch_orders_chunked(
+    client: AsyncClient,
+    orders: list[dict],
+    chunk_size: int = 5,
+    max_concurrent_batches: int = 3,
+) -> list[dict]:
+    """
+    Submit any number of orders using batchOrders, splitting into chunks of `chunk_size`.
+
+    `max_concurrent_batches` controls how many batch requests are in-flight at once.
+    Returns combined list of per-order results.
+    """
+    if not orders:
+        return []
+
+    chunks = [orders[i:i + chunk_size] for i in range(0, len(orders), chunk_size)]
+    results: list[dict] = []
+
+    # Process chunks with limited concurrency
+    sem = asyncio.Semaphore(max_concurrent_batches)
+
+    async def _send_chunk(chunk: list[dict]) -> list[dict]:
+        async with sem:
+            try:
+                return await place_batch_orders(client, chunk)
+            except Exception as e:
+                logger.error("batchOrders chunk failed: {}", e)
+                return [{"code": -1, "msg": str(e)} for _ in chunk]
+
+    tasks = [_send_chunk(chunk) for chunk in chunks]
+    chunk_results = await asyncio.gather(*tasks)
+    for res in chunk_results:
+        results.extend(res)
+    return results
+
+
+# ─────────────────────────────────────────────────────────────
+# Algo / Take-Profit orders
+# ─────────────────────────────────────────────────────────────
 async def place_take_profit_algo(client: AsyncClient, symbol: str, side: str,
                               stop_price: float,
-                              price_precision: int) -> dict:
+                              price_precision: int,
+                              client_order_id: str | None = None) -> dict:
     """
     Place a TAKE_PROFIT_MARKET order via Binance Algo Order API (POST /fapi/v1/algoOrder).
     Uses closePosition=true — closes entire position when triggerPrice is reached.
     side: opposite of position direction (long→SELL, short→BUY).
     """
     sp_str = f"{stop_price:.{price_precision}f}"
-    params = {
+    params: dict[str, Any] = {
         "algoType": "CONDITIONAL",
         "symbol": symbol,
         "side": side,
@@ -187,32 +301,77 @@ async def place_take_profit_algo(client: AsyncClient, symbol: str, side: str,
         "closePosition": "true",
         "workingType": "CONTRACT_PRICE",
     }
+    if client_order_id:
+        params["newClientOrderId"] = client_order_id
     res = await client._request_futures_api("post", "algoOrder", True, data=params)
-    logger.info("TP Algo order placed: {} {} triggerPrice={} (closePosition=true)", side, symbol, sp_str)
+    logger.info("TP Algo order placed: {} {} triggerPrice={} (closePosition=true) algoId={}",
+                side, symbol, sp_str, res.get("algoId") or res.get("result", {}).get("algoId"))
     return res
 
 
 async def cancel_algo_order(client: AsyncClient, symbol: str, algo_id: str | int) -> dict:
     """Cancel a single Algo order using DELETE /fapi/v1/algoOrder."""
     try:
-        res = await client._request_futures_api("delete", "algoOrder", True, data={"symbol": symbol, "algoId": str(algo_id)})
+        res = await client._request_futures_api(
+            "delete", "algoOrder", True,
+            data={"symbol": symbol, "algoId": str(algo_id)}
+        )
         logger.info("Cancelled algo order {} on {}", algo_id, symbol)
         return res
+    except BinanceAPIException as e:
+        # -2011: Unknown order / already gone
+        if "-2011" in str(e) or "Unknown order" in str(e) or "Order does not exist" in str(e):
+            logger.info("Algo order {} on {} already gone/non-existent", algo_id, symbol)
+            return {"alreadyGone": True}
+        logger.warning("Cancel algo order {} on {} failed: {}", algo_id, symbol, e)
+        raise
     except Exception as e:
         logger.warning("Cancel algo order {} on {} failed: {}", algo_id, symbol, e)
-        return {}
+        raise
+
+
+async def get_open_algo_orders(client: AsyncClient, symbol: str) -> list[dict]:
+    """Get all open Algo orders for a symbol."""
+    try:
+        result = await client._request_futures_api(
+            "get", "openAlgoOrders", True, data={"symbol": symbol}
+        )
+        if isinstance(result, list):
+            return result
+        # Some API versions return {"total": ..., "orders": [...]}
+        if isinstance(result, dict):
+            return result.get("orders", [])
+        return []
+    except Exception as e:
+        logger.warning("get_open_algo_orders for {}: {}", symbol, e)
+        return []
 
 
 async def cancel_all_algo_orders(client: AsyncClient, symbol: str):
     """Cancel all open Algo orders for symbol."""
     try:
-        orders = await client._request_futures_api("get", "openAlgoOrders", True, data={"symbol": symbol})
-        for o in orders:
-            algo_id = o.get("algoId")
-            if algo_id:
-                await cancel_algo_order(client, symbol, algo_id)
+        orders = await get_open_algo_orders(client, symbol)
+        if orders:
+            cancel_tasks = []
+            for o in orders:
+                algo_id = o.get("algoId")
+                if algo_id:
+                    cancel_tasks.append(
+                        asyncio.create_task(
+                            _safe_cancel_algo(client, symbol, algo_id)
+                        )
+                    )
+            if cancel_tasks:
+                await asyncio.gather(*cancel_tasks, return_exceptions=True)
     except Exception as e:
         logger.warning("cancel_all_algo_orders for {}: {}", symbol, e)
+
+
+async def _safe_cancel_algo(client: AsyncClient, symbol: str, algo_id):
+    try:
+        await cancel_algo_order(client, symbol, algo_id)
+    except Exception as e:
+        logger.warning("_safe_cancel_algo {} {}: {}", symbol, algo_id, e)
 
 
 async def cancel_order(client: AsyncClient, symbol: str, order_id: str) -> dict:

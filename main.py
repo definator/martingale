@@ -8,9 +8,10 @@ Workflow:
   1. Load config.json
   2. Init DB
   3. Create Binance AsyncClient + BinanceSocketManager
-  4. For each symbol in config, spawn a SymbolTrader coroutine
-  5. All traders run concurrently via asyncio
-  6. Graceful shutdown on SIGINT / SIGTERM
+  4. Start Notifier background worker
+  5. For each symbol in config, spawn a SymbolTrader coroutine
+  6. All traders run concurrently via asyncio
+  7. Graceful shutdown on SIGINT / SIGTERM (log metrics, drain notifier)
 """
 
 import asyncio
@@ -77,12 +78,13 @@ async def main(config_path: str):
     bsm = BinanceSocketManager(client)
     logger.info("Binance client ready  testnet={}", testnet)
 
-    # Notifier
+    # Notifier (background queue worker started immediately)
     notifier = Notifier(
         enabled=cfg.get("telegram_enabled", False),
         bot_token=cfg.get("telegram_bot_token", ""),
         chat_id=cfg.get("telegram_chat_id", ""),
     )
+    notifier.start_worker()
 
     # Build traders
     traders: list[SymbolTrader] = []
@@ -98,7 +100,7 @@ async def main(config_path: str):
         logger.info("Trader initialized for {}", sym_cfg["symbol"])
 
     # Graceful shutdown handler
-    loop = asyncio.get_running_loop()
+    loop  = asyncio.get_running_loop()
     tasks: list[asyncio.Task] = []
 
     def _handle_signal():
@@ -124,6 +126,8 @@ async def main(config_path: str):
         except Exception as e:
             logger.exception("{}: unhandled exception: {}", trader.symbol, e)
             await notifier.error(trader.symbol, f"Критическая ошибка: {e}")
+        finally:
+            trader.log_metrics()
 
     tasks = [asyncio.create_task(run_trader(t)) for t in traders]
 
@@ -132,6 +136,8 @@ async def main(config_path: str):
     except asyncio.CancelledError:
         pass
     finally:
+        # Drain notifier queue before exit
+        await notifier.stop_worker()
         await client.close_connection()
         logger.info("Bot stopped. Binance connection closed.")
 

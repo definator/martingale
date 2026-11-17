@@ -1,23 +1,40 @@
 {
-  "api_key": "****",
-  "api_secret": "****",
+  "api_key": "",
+  "api_secret": "",
   "use_testnet": false,
 
   "telegram_enabled": true,
-  "telegram_bot_token": "****",
-  "telegram_chat_id": "****",
+  "telegram_bot_token": "",
+  "telegram_chat_id": "",
 
   "symbols": [
     {
-      "symbol": "BTWUSDT",
-      "start_deposit": 10.0,
-      "take_profit": 4.1,
+      "symbol": "EVAAUSDT",
+      "start_deposit": 5.0,
+      "take_profit": 3.1,
       "direction": "short",
-      "distance_pct": 12,
-      "multiplier": 1.2,
-      "orders_qty": 8,
-      "max_tries": 3,
-      "trailing_take_profit": true
+      "max_tries": 1,
+      "trailing_take_profit": true,
+
+      "specifyEveryOrder": true,
+
+      "distance_pct": 15.0,
+      "multiplier": 1.35,
+      "orders_qty": 9,
+      "start_price": 0.52858,
+      "maintenanceMarginRate": 0.005,
+      "walletBalanceUsdt": 100.0,
+
+      "orders": [
+        {"distancePct": 1.7, "priceDiffPct": 1.2},
+        {"distancePct": 1.7, "priceDiffPct": 1.2},
+        {"distancePct": 1.9, "priceDiffPct": 1.2},
+        {"distancePct": 2.0, "priceDiffPct": 1.2},
+	{"distancePct": 2.0, "priceDiffPct": 1.2},
+	{"distancePct": 2.0, "priceDiffPct": 1.2},
+	{"distancePct": 4.1, "priceDiffPct": 1.2},
+	{"distancePct": 6.1, "priceDiffPct": 1.2}
+      ]
     }
   ]
 }
